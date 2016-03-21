@@ -126,14 +126,14 @@ public class Solution {
         fin.add(null);
         fin.add("abc");
         fin.add(-100);
-        fin.add(def);                        
+        fin.add(def);                                        
         
         // Calling the flatten function
-        flatten((Collection) null);
+        ArrayList<Object> output = flatten((Collection) fin);
         
-        System.out.println("Result Array: " + result.size());
+        System.out.println("Result Array: " + output.size());
         
-        for(Object obj : result) {
+        for(Object obj : output) {
             System.out.print(obj + " ");
         }
     }
