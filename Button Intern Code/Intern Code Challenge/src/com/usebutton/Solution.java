@@ -49,6 +49,8 @@ public class Solution {
             */
             for(T type : input) {                    
                 
+                // If the object is not null, then only it will pass through this
+                if(type != null) {
                 // this if condition checks whether the object is instance of collection
                 if(type instanceof Collection) {
                     
@@ -59,15 +61,69 @@ public class Solution {
                     */
                     flatten((Collection)type);
                 }
+                // this condition checks whether the object is an array or not                    
+                else if(type.getClass().isArray()) {
+                    
+                    // get the componentType of the object
+                    Class<?> componentType;
+                    componentType = type.getClass().getComponentType();
+
+                    // this condition checks whether the object is an array is of primitive datatype
+                    //    or user defined dataype. This will work only for primitive data type
+                    if (componentType.isPrimitive()) {
+                        
+                        // If the array is of int datatype, this condition for travesering through
+                        //  that and insert the data into the array
+                        if (int.class.isAssignableFrom(componentType)) {
+                            for (int element : (int[]) type) {
+                                result.add(element);
+                            }
+                        }
+                        else if (boolean.class.isAssignableFrom(componentType)) {
+                            for (boolean element : (boolean[]) type) {
+                                result.add(element);
+                            }
+                        }
+                        else if (byte.class.isAssignableFrom(componentType)) {
+                            for (byte element : (byte[]) type) {
+                                result.add(element);
+                            }
+                        }
+                        else if (char.class.isAssignableFrom(componentType)) {
+                            for (char element : (char[]) type) {
+                                result.add(element);
+                            }
+                        }
+                        else if (double.class.isAssignableFrom(componentType)) {
+                            for (double element : (double[]) type) {
+                                result.add(element);
+                            }
+                        }
+                        else if (float.class.isAssignableFrom(componentType)) {
+                            for (float element : (float[]) type) {
+                                result.add(element);
+                            }
+                        }
+                        else if (long.class.isAssignableFrom(componentType)) {
+                            for (long element : (long[]) type) {
+                                result.add(element);
+                            }
+                        }
+                        else if (short.class.isAssignableFrom(componentType)) {
+                            for (short element : (short[]) type) {
+                                result.add(element);
+                            }
+                        }
+                    }
+                }
                 /* this condition checks whether the object is anything 
-                   other than collection, i.e., it is a primitve datatype */
+                   other than collection or array, i.e., it is a primitve datatype */
                 else {
                     
-                    /* If the data type is  not null,
-                        value is going to be save in the resultant arrayList */
-                    if(type != null)
+                        //elemet is going to be save in the resultant arrayList */                   
                         result.add(type);
-                }            
+                    }
+                }
             }           
         }
         // Else loop will execute, if the collection is null
@@ -101,6 +157,8 @@ public class Solution {
                         
         ArrayList<Object> i = new ArrayList<>();
         
+        int[] ar = {11, 22, 33};
+        
         i.add(null);
         i.add(null);
         abc.add(i);
@@ -127,6 +185,7 @@ public class Solution {
         fin.add("abc");
         fin.add(-100);
         fin.add(def);                                        
+        fin.add(ar);
         
         // Calling the flatten function
         ArrayList<Object> output = flatten((Collection) fin);
