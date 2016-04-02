@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 3, 2016 12:20:10 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.books.pojo.Books" table="books" catalog="Assignment5Part2" optimistic-lock="version">
+        <id name="isbn" type="string">
+            <column name="isbn" length="12" />
+            <generator class="assigned" />
+        </id>
+        <property name="title" type="string">
+            <column name="title" length="60" />
+        </property>
+        <property name="author" type="string">
+            <column name="author" length="60" />
+        </property>
+        <property name="price" type="java.lang.Float">
+            <column name="price" precision="12" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

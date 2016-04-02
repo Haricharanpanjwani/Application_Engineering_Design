@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.neu.pojo.User" table="users">
+      <id column="id" name="id">
+          <generator class="native"/>
+      </id>
+      <property name="first" column="First" type="string" />
+      <property name="last" column="Last" type="string" />
+      <property name="gender" column="Gender" type="string" />
+      <property name="email" column="Email" type="string" />
+      <property name="aboutMe" column="AboutMe" type="string" />
+  </class>
+  
+  
+</hibernate-mapping>

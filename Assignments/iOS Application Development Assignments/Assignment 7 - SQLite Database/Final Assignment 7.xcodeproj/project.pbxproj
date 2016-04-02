@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BC5356E01CA8CE31005DB994 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5356DF1CA8CE31005DB994 /* DBManager.m */; };
+		BC5356E21CA8CE56005DB994 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5356E11CA8CE56005DB994 /* libsqlite3.tbd */; settings = {ATTRIBUTES = (Required, ); }; };
+		BC5356F81CA8DD9F005DB994 /* Hospital.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5356F31CA8DD9F005DB994 /* Hospital.m */; };
+		BC5356F91CA8DD9F005DB994 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5356F51CA8DD9F005DB994 /* Patient.m */; };
+		BC5356FA1CA8DD9F005DB994 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5356F71CA8DD9F005DB994 /* Person.m */; };
+		BC5357081CA9E236005DB994 /* hosp.db in Resources */ = {isa = PBXBuildFile; fileRef = BC5357071CA9E236005DB994 /* hosp.db */; };
+		BC6DDAD81CA8658C0081E09E /* PatientsView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6DDAD71CA8658C0081E09E /* PatientsView.m */; };
+		BC94FA6E1CA74DFF00DE2CAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC94FA6D1CA74DFF00DE2CAD /* main.m */; };
+		BC94FA711CA74DFF00DE2CAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC94FA701CA74DFF00DE2CAD /* AppDelegate.m */; };
+		BC94FA741CA74DFF00DE2CAD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC94FA731CA74DFF00DE2CAD /* ViewController.m */; };
+		BC94FA771CA74DFF00DE2CAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC94FA751CA74DFF00DE2CAD /* Main.storyboard */; };
+		BC94FA7A1CA74DFF00DE2CAD /* Final_Assignment_7.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC94FA781CA74DFF00DE2CAD /* Final_Assignment_7.xcdatamodeld */; };
+		BC94FA7C1CA74DFF00DE2CAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC94FA7B1CA74DFF00DE2CAD /* Assets.xcassets */; };
+		BC94FA7F1CA74DFF00DE2CAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC94FA7D1CA74DFF00DE2CAD /* LaunchScreen.storyboard */; };
+		BC94FA8A1CA74DFF00DE2CAD /* Final_Assignment_7Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC94FA891CA74DFF00DE2CAD /* Final_Assignment_7Tests.m */; };
+		BC94FA951CA74DFF00DE2CAD /* Final_Assignment_7UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC94FA941CA74DFF00DE2CAD /* Final_Assignment_7UITests.m */; };
+		BC94FAB21CA74ED600DE2CAD /* HospitalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC94FAA71CA74ED600DE2CAD /* HospitalViewController.m */; };
+		BC94FAB91CA74FA000DE2CAD /* AddPatientFirstFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC94FAB81CA74FA000DE2CAD /* AddPatientFirstFormViewController.m */; };
+		BC94FAF51CA81D8E00DE2CAD /* PatientDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC94FAF41CA81D8E00DE2CAD /* PatientDetailView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC94FA861CA74DFF00DE2CAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC94FA611CA74DFF00DE2CAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC94FA681CA74DFF00DE2CAD;
+			remoteInfo = "Final Assignment 7";
+		};
+		BC94FA911CA74DFF00DE2CAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC94FA611CA74DFF00DE2CAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC94FA681CA74DFF00DE2CAD;
+			remoteInfo = "Final Assignment 7";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BC5356DE1CA8CE31005DB994 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		BC5356DF1CA8CE31005DB994 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		BC5356E11CA8CE56005DB994 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		BC5356F21CA8DD9F005DB994 /* Hospital.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Hospital.h; path = "Final Assignment 7/Hospital.h"; sourceTree = "<group>"; };
+		BC5356F31CA8DD9F005DB994 /* Hospital.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Hospital.m; path = "Final Assignment 7/Hospital.m"; sourceTree = "<group>"; };
+		BC5356F41CA8DD9F005DB994 /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Patient.h; path = "Final Assignment 7/Patient.h"; sourceTree = "<group>"; };
+		BC5356F51CA8DD9F005DB994 /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Patient.m; path = "Final Assignment 7/Patient.m"; sourceTree = "<group>"; };
+		BC5356F61CA8DD9F005DB994 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Person.h; path = "Final Assignment 7/Person.h"; sourceTree = "<group>"; };
+		BC5356F71CA8DD9F005DB994 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Person.m; path = "Final Assignment 7/Person.m"; sourceTree = "<group>"; };
+		BC5357071CA9E236005DB994 /* hosp.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = hosp.db; sourceTree = "<group>"; };
+		BC6DDAD61CA8658C0081E09E /* PatientsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientsView.h; sourceTree = "<group>"; };
+		BC6DDAD71CA8658C0081E09E /* PatientsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientsView.m; sourceTree = "<group>"; };
+		BC94FA691CA74DFF00DE2CAD /* Final Assignment 7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Final Assignment 7.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC94FA6D1CA74DFF00DE2CAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BC94FA6F1CA74DFF00DE2CAD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BC94FA701CA74DFF00DE2CAD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BC94FA721CA74DFF00DE2CAD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BC94FA731CA74DFF00DE2CAD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BC94FA761CA74DFF00DE2CAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BC94FA791CA74DFF00DE2CAD /* Final_Assignment_7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Final_Assignment_7.xcdatamodel; sourceTree = "<group>"; };
+		BC94FA7B1CA74DFF00DE2CAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC94FA7E1CA74DFF00DE2CAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BC94FA801CA74DFF00DE2CAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC94FA851CA74DFF00DE2CAD /* Final Assignment 7Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Final Assignment 7Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC94FA891CA74DFF00DE2CAD /* Final_Assignment_7Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Final_Assignment_7Tests.m; sourceTree = "<group>"; };
+		BC94FA8B1CA74DFF00DE2CAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC94FA901CA74DFF00DE2CAD /* Final Assignment 7UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Final Assignment 7UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC94FA941CA74DFF00DE2CAD /* Final_Assignment_7UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Final_Assignment_7UITests.m; sourceTree = "<group>"; };
+		BC94FA961CA74DFF00DE2CAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC94FAA61CA74ED600DE2CAD /* HospitalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalViewController.h; sourceTree = "<group>"; };
+		BC94FAA71CA74ED600DE2CAD /* HospitalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalViewController.m; sourceTree = "<group>"; };
+		BC94FAB71CA74FA000DE2CAD /* AddPatientFirstFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPatientFirstFormViewController.h; sourceTree = "<group>"; };
+		BC94FAB81CA74FA000DE2CAD /* AddPatientFirstFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPatientFirstFormViewController.m; sourceTree = "<group>"; };
+		BC94FAF31CA81D8E00DE2CAD /* PatientDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PatientDetailView.h; path = ../PatientDetailView.h; sourceTree = "<group>"; };
+		BC94FAF41CA81D8E00DE2CAD /* PatientDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PatientDetailView.m; path = ../PatientDetailView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BC94FA661CA74DFF00DE2CAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC5356E21CA8CE56005DB994 /* libsqlite3.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC94FA821CA74DFF00DE2CAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC94FA8D1CA74DFF00DE2CAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BC94FA601CA74DFF00DE2CAD = {
+			isa = PBXGroup;
+			children = (
+				BC5357071CA9E236005DB994 /* hosp.db */,
+				BC5356F21CA8DD9F005DB994 /* Hospital.h */,
+				BC5356F31CA8DD9F005DB994 /* Hospital.m */,
+				BC5356F41CA8DD9F005DB994 /* Patient.h */,
+				BC5356F51CA8DD9F005DB994 /* Patient.m */,
+				BC5356F61CA8DD9F005DB994 /* Person.h */,
+				BC5356F71CA8DD9F005DB994 /* Person.m */,
+				BC5356DE1CA8CE31005DB994 /* DBManager.h */,
+				BC5356DF1CA8CE31005DB994 /* DBManager.m */,
+				BC94FA6B1CA74DFF00DE2CAD /* Final Assignment 7 */,
+				BC94FA881CA74DFF00DE2CAD /* Final Assignment 7Tests */,
+				BC94FA931CA74DFF00DE2CAD /* Final Assignment 7UITests */,
+				BC94FA6A1CA74DFF00DE2CAD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BC94FA6A1CA74DFF00DE2CAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC94FA691CA74DFF00DE2CAD /* Final Assignment 7.app */,
+				BC94FA851CA74DFF00DE2CAD /* Final Assignment 7Tests.xctest */,
+				BC94FA901CA74DFF00DE2CAD /* Final Assignment 7UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC94FA6B1CA74DFF00DE2CAD /* Final Assignment 7 */ = {
+			isa = PBXGroup;
+			children = (
+				BC94FA6F1CA74DFF00DE2CAD /* AppDelegate.h */,
+				BC94FA701CA74DFF00DE2CAD /* AppDelegate.m */,
+				BC94FA721CA74DFF00DE2CAD /* ViewController.h */,
+				BC94FA731CA74DFF00DE2CAD /* ViewController.m */,
+				BC94FAA61CA74ED600DE2CAD /* HospitalViewController.h */,
+				BC94FAA71CA74ED600DE2CAD /* HospitalViewController.m */,
+				BC94FAB71CA74FA000DE2CAD /* AddPatientFirstFormViewController.h */,
+				BC94FAB81CA74FA000DE2CAD /* AddPatientFirstFormViewController.m */,
+				BC6DDAD61CA8658C0081E09E /* PatientsView.h */,
+				BC6DDAD71CA8658C0081E09E /* PatientsView.m */,
+				BC94FAF31CA81D8E00DE2CAD /* PatientDetailView.h */,
+				BC94FAF41CA81D8E00DE2CAD /* PatientDetailView.m */,
+				BC94FA751CA74DFF00DE2CAD /* Main.storyboard */,
+				BC94FA781CA74DFF00DE2CAD /* Final_Assignment_7.xcdatamodeld */,
+				BC94FA7B1CA74DFF00DE2CAD /* Assets.xcassets */,
+				BC94FA7D1CA74DFF00DE2CAD /* LaunchScreen.storyboard */,
+				BC94FA801CA74DFF00DE2CAD /* Info.plist */,
+				BC94FA6C1CA74DFF00DE2CAD /* Supporting Files */,
+			);
+			path = "Final Assignment 7";
+			sourceTree = "<group>";
+		};
+		BC94FA6C1CA74DFF00DE2CAD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC5356E11CA8CE56005DB994 /* libsqlite3.tbd */,
+				BC94FA6D1CA74DFF00DE2CAD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BC94FA881CA74DFF00DE2CAD /* Final Assignment 7Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BC94FA891CA74DFF00DE2CAD /* Final_Assignment_7Tests.m */,
+				BC94FA8B1CA74DFF00DE2CAD /* Info.plist */,
+			);
+			path = "Final Assignment 7Tests";
+			sourceTree = "<group>";
+		};
+		BC94FA931CA74DFF00DE2CAD /* Final Assignment 7UITests */ = {
+			isa = PBXGroup;
+			children = (
+				BC94FA941CA74DFF00DE2CAD /* Final_Assignment_7UITests.m */,
+				BC94FA961CA74DFF00DE2CAD /* Info.plist */,
+			);
+			path = "Final Assignment 7UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BC94FA681CA74DFF00DE2CAD /* Final Assignment 7 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC94FA991CA74DFF00DE2CAD /* Build configuration list for PBXNativeTarget "Final Assignment 7" */;
+			buildPhases = (
+				BC94FA651CA74DFF00DE2CAD /* Sources */,
+				BC94FA661CA74DFF00DE2CAD /* Frameworks */,
+				BC94FA671CA74DFF00DE2CAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Final Assignment 7";
+			productName = "Final Assignment 7";
+			productReference = BC94FA691CA74DFF00DE2CAD /* Final Assignment 7.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BC94FA841CA74DFF00DE2CAD /* Final Assignment 7Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC94FA9C1CA74DFF00DE2CAD /* Build configuration list for PBXNativeTarget "Final Assignment 7Tests" */;
+			buildPhases = (
+				BC94FA811CA74DFF00DE2CAD /* Sources */,
+				BC94FA821CA74DFF00DE2CAD /* Frameworks */,
+				BC94FA831CA74DFF00DE2CAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC94FA871CA74DFF00DE2CAD /* PBXTargetDependency */,
+			);
+			name = "Final Assignment 7Tests";
+			productName = "Final Assignment 7Tests";
+			productReference = BC94FA851CA74DFF00DE2CAD /* Final Assignment 7Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BC94FA8F1CA74DFF00DE2CAD /* Final Assignment 7UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC94FA9F1CA74DFF00DE2CAD /* Build configuration list for PBXNativeTarget "Final Assignment 7UITests" */;
+			buildPhases = (
+				BC94FA8C1CA74DFF00DE2CAD /* Sources */,
+				BC94FA8D1CA74DFF00DE2CAD /* Frameworks */,
+				BC94FA8E1CA74DFF00DE2CAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC94FA921CA74DFF00DE2CAD /* PBXTargetDependency */,
+			);
+			name = "Final Assignment 7UITests";
+			productName = "Final Assignment 7UITests";
+			productReference = BC94FA901CA74DFF00DE2CAD /* Final Assignment 7UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BC94FA611CA74DFF00DE2CAD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Hari Panjwani";
+				TargetAttributes = {
+					BC94FA681CA74DFF00DE2CAD = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					BC94FA841CA74DFF00DE2CAD = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = BC94FA681CA74DFF00DE2CAD;
+					};
+					BC94FA8F1CA74DFF00DE2CAD = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = BC94FA681CA74DFF00DE2CAD;
+					};
+				};
+			};
+			buildConfigurationList = BC94FA641CA74DFF00DE2CAD /* Build configuration list for PBXProject "Final Assignment 7" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BC94FA601CA74DFF00DE2CAD;
+			productRefGroup = BC94FA6A1CA74DFF00DE2CAD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BC94FA681CA74DFF00DE2CAD /* Final Assignment 7 */,
+				BC94FA841CA74DFF00DE2CAD /* Final Assignment 7Tests */,
+				BC94FA8F1CA74DFF00DE2CAD /* Final Assignment 7UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC94FA671CA74DFF00DE2CAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC94FA7F1CA74DFF00DE2CAD /* LaunchScreen.storyboard in Resources */,
+				BC5357081CA9E236005DB994 /* hosp.db in Resources */,
+				BC94FA7C1CA74DFF00DE2CAD /* Assets.xcassets in Resources */,
+				BC94FA771CA74DFF00DE2CAD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC94FA831CA74DFF00DE2CAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC94FA8E1CA74DFF00DE2CAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BC94FA651CA74DFF00DE2CAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC94FA741CA74DFF00DE2CAD /* ViewController.m in Sources */,
+				BC5356F81CA8DD9F005DB994 /* Hospital.m in Sources */,
+				BC6DDAD81CA8658C0081E09E /* PatientsView.m in Sources */,
+				BC94FA711CA74DFF00DE2CAD /* AppDelegate.m in Sources */,
+				BC5356F91CA8DD9F005DB994 /* Patient.m in Sources */,
+				BC94FAF51CA81D8E00DE2CAD /* PatientDetailView.m in Sources */,
+				BC5356FA1CA8DD9F005DB994 /* Person.m in Sources */,
+				BC5356E01CA8CE31005DB994 /* DBManager.m in Sources */,
+				BC94FA6E1CA74DFF00DE2CAD /* main.m in Sources */,
+				BC94FA7A1CA74DFF00DE2CAD /* Final_Assignment_7.xcdatamodeld in Sources */,
+				BC94FAB21CA74ED600DE2CAD /* HospitalViewController.m in Sources */,
+				BC94FAB91CA74FA000DE2CAD /* AddPatientFirstFormViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC94FA811CA74DFF00DE2CAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC94FA8A1CA74DFF00DE2CAD /* Final_Assignment_7Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC94FA8C1CA74DFF00DE2CAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC94FA951CA74DFF00DE2CAD /* Final_Assignment_7UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC94FA871CA74DFF00DE2CAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC94FA681CA74DFF00DE2CAD /* Final Assignment 7 */;
+			targetProxy = BC94FA861CA74DFF00DE2CAD /* PBXContainerItemProxy */;
+		};
+		BC94FA921CA74DFF00DE2CAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC94FA681CA74DFF00DE2CAD /* Final Assignment 7 */;
+			targetProxy = BC94FA911CA74DFF00DE2CAD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BC94FA751CA74DFF00DE2CAD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC94FA761CA74DFF00DE2CAD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BC94FA7D1CA74DFF00DE2CAD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC94FA7E1CA74DFF00DE2CAD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BC94FA971CA74DFF00DE2CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BC94FA981CA74DFF00DE2CAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC94FA9A1CA74DFF00DE2CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Final Assignment 7/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neu.smartphone.Final-Assignment-7";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BC94FA9B1CA74DFF00DE2CAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Final Assignment 7/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neu.smartphone.Final-Assignment-7";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BC94FA9D1CA74DFF00DE2CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Final Assignment 7Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neu.smartphone.Final-Assignment-7Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Final Assignment 7.app/Final Assignment 7";
+			};
+			name = Debug;
+		};
+		BC94FA9E1CA74DFF00DE2CAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Final Assignment 7Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neu.smartphone.Final-Assignment-7Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Final Assignment 7.app/Final Assignment 7";
+			};
+			name = Release;
+		};
+		BC94FAA01CA74DFF00DE2CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Final Assignment 7UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neu.smartphone.Final-Assignment-7UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Final Assignment 7";
+			};
+			name = Debug;
+		};
+		BC94FAA11CA74DFF00DE2CAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Final Assignment 7UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neu.smartphone.Final-Assignment-7UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Final Assignment 7";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BC94FA641CA74DFF00DE2CAD /* Build configuration list for PBXProject "Final Assignment 7" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC94FA971CA74DFF00DE2CAD /* Debug */,
+				BC94FA981CA74DFF00DE2CAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC94FA991CA74DFF00DE2CAD /* Build configuration list for PBXNativeTarget "Final Assignment 7" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC94FA9A1CA74DFF00DE2CAD /* Debug */,
+				BC94FA9B1CA74DFF00DE2CAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC94FA9C1CA74DFF00DE2CAD /* Build configuration list for PBXNativeTarget "Final Assignment 7Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC94FA9D1CA74DFF00DE2CAD /* Debug */,
+				BC94FA9E1CA74DFF00DE2CAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC94FA9F1CA74DFF00DE2CAD /* Build configuration list for PBXNativeTarget "Final Assignment 7UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC94FAA01CA74DFF00DE2CAD /* Debug */,
+				BC94FAA11CA74DFF00DE2CAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BC94FA781CA74DFF00DE2CAD /* Final_Assignment_7.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BC94FA791CA74DFF00DE2CAD /* Final_Assignment_7.xcdatamodel */,
+			);
+			currentVersion = BC94FA791CA74DFF00DE2CAD /* Final_Assignment_7.xcdatamodel */;
+			path = Final_Assignment_7.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BC94FA611CA74DFF00DE2CAD /* Project object */;
+}

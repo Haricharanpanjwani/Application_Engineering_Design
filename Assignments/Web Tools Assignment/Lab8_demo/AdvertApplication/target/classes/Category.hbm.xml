@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.yusuf.spring.pojo.Category" table="categorytable">
+    <id column="id" name="id" type="long">
+      <generator class="native"/>
+    </id>
+    <property column="title" name="title" type="string" unique="true"/>
+    <set name="adverts" cascade="all">
+      <key column="category"/>
+      <one-to-many class="com.yusuf.spring.pojo.Advert"/>
+    </set>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/lab9</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+
+		<property name="hibernate.hbm2ddl.auto">create</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.show_sql">true</property>
+
+		<mapping class="com.yusuf.spring.pojo.User" />
+		<mapping class="com.yusuf.spring.pojo.Email" />
+		<mapping class="com.yusuf.spring.pojo.Category" />
+		<mapping class="com.yusuf.spring.pojo.Person" />
+		<mapping class="com.yusuf.spring.pojo.Advert" />
+
+	</session-factory>
+</hibernate-configuration>

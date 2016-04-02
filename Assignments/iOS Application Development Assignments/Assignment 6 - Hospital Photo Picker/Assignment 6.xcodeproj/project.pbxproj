@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BCE514DF1C98D0EC00572244 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE514DE1C98D0EC00572244 /* main.m */; };
+		BCE514E21C98D0EC00572244 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE514E11C98D0EC00572244 /* AppDelegate.m */; };
+		BCE514F81C98D0EC00572244 /* Assignment_6Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE514F71C98D0EC00572244 /* Assignment_6Tests.m */; };
+		BCE515031C98D0EC00572244 /* Assignment_6UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE515021C98D0EC00572244 /* Assignment_6UITests.m */; };
+		BCE515151C9A4A8500572244 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE515131C9A4A8500572244 /* ViewController.m */; };
+		BCE515161C9A4A8500572244 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCE515141C9A4A8500572244 /* ViewController.xib */; };
+		BCE5151A1C9A51C500572244 /* AddPatientFirstFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE515181C9A51C500572244 /* AddPatientFirstFormViewController.m */; };
+		BCE5151B1C9A51C500572244 /* AddPatientFirstFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCE515191C9A51C500572244 /* AddPatientFirstFormViewController.xib */; };
+		BCE5151F1C9A584200572244 /* AddPatientSecondFormView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE5151D1C9A584200572244 /* AddPatientSecondFormView.m */; };
+		BCE515201C9A584200572244 /* AddPatientSecondFormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCE5151E1C9A584200572244 /* AddPatientSecondFormView.xib */; };
+		BCE515241C9A690D00572244 /* PatientListView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE515221C9A690D00572244 /* PatientListView.m */; };
+		BCE515251C9A690D00572244 /* PatientListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCE515231C9A690D00572244 /* PatientListView.xib */; };
+		BCE515301C9B535400572244 /* Department.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE515271C9B535400572244 /* Department.m */; };
+		BCE515311C9B535400572244 /* Hospital.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE515291C9B535400572244 /* Hospital.m */; };
+		BCE515321C9B535400572244 /* MedicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE5152B1C9B535400572244 /* MedicalRecord.m */; };
+		BCE515331C9B535400572244 /* NSString+Read.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE5152D1C9B535400572244 /* NSString+Read.m */; };
+		BCE515341C9B535400572244 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE5152F1C9B535400572244 /* Patient.m */; };
+		BCE515371C9B536B00572244 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE515361C9B536B00572244 /* Person.m */; };
+		BCE515391C9C803600572244 /* minion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCE515381C9C803600572244 /* minion.jpg */; };
+		BCE515421C9CA33900572244 /* PatientDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE515401C9CA33900572244 /* PatientDetailView.m */; };
+		BCE515431C9CA33900572244 /* PatientDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCE515411C9CA33900572244 /* PatientDetailView.xib */; };
+		BCE515541C9EE41200572244 /* CreateHospitalView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE515521C9EE41200572244 /* CreateHospitalView.m */; };
+		BCE515551C9EE41200572244 /* CreateHospitalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCE515531C9EE41200572244 /* CreateHospitalView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BCE514F41C98D0EC00572244 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCE514D21C98D0EC00572244 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCE514D91C98D0EC00572244;
+			remoteInfo = "Assignment 6";
+		};
+		BCE514FF1C98D0EC00572244 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCE514D21C98D0EC00572244 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCE514D91C98D0EC00572244;
+			remoteInfo = "Assignment 6";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BCE514DA1C98D0EC00572244 /* Assignment 6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Assignment 6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCE514DE1C98D0EC00572244 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BCE514E01C98D0EC00572244 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BCE514E11C98D0EC00572244 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BCE514EE1C98D0EC00572244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCE514F31C98D0EC00572244 /* Assignment 6Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Assignment 6Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCE514F71C98D0EC00572244 /* Assignment_6Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Assignment_6Tests.m; sourceTree = "<group>"; };
+		BCE514F91C98D0EC00572244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCE514FE1C98D0EC00572244 /* Assignment 6UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Assignment 6UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCE515021C98D0EC00572244 /* Assignment_6UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Assignment_6UITests.m; sourceTree = "<group>"; };
+		BCE515041C98D0EC00572244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCE515121C9A4A8500572244 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
+		BCE515131C9A4A8500572244 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
+		BCE515141C9A4A8500572244 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ViewController.xib; path = ../ViewController.xib; sourceTree = "<group>"; };
+		BCE515171C9A51C500572244 /* AddPatientFirstFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPatientFirstFormViewController.h; sourceTree = "<group>"; };
+		BCE515181C9A51C500572244 /* AddPatientFirstFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPatientFirstFormViewController.m; sourceTree = "<group>"; };
+		BCE515191C9A51C500572244 /* AddPatientFirstFormViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPatientFirstFormViewController.xib; sourceTree = "<group>"; };
+		BCE5151C1C9A584200572244 /* AddPatientSecondFormView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPatientSecondFormView.h; sourceTree = "<group>"; };
+		BCE5151D1C9A584200572244 /* AddPatientSecondFormView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPatientSecondFormView.m; sourceTree = "<group>"; };
+		BCE5151E1C9A584200572244 /* AddPatientSecondFormView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPatientSecondFormView.xib; sourceTree = "<group>"; };
+		BCE515211C9A690D00572244 /* PatientListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientListView.h; sourceTree = "<group>"; };
+		BCE515221C9A690D00572244 /* PatientListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientListView.m; sourceTree = "<group>"; };
+		BCE515231C9A690D00572244 /* PatientListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatientListView.xib; sourceTree = "<group>"; };
+		BCE515261C9B535400572244 /* Department.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Department.h; sourceTree = "<group>"; };
+		BCE515271C9B535400572244 /* Department.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Department.m; sourceTree = "<group>"; };
+		BCE515281C9B535400572244 /* Hospital.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hospital.h; sourceTree = "<group>"; };
+		BCE515291C9B535400572244 /* Hospital.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hospital.m; sourceTree = "<group>"; };
+		BCE5152A1C9B535400572244 /* MedicalRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicalRecord.h; sourceTree = "<group>"; };
+		BCE5152B1C9B535400572244 /* MedicalRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicalRecord.m; sourceTree = "<group>"; };
+		BCE5152C1C9B535400572244 /* NSString+Read.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Read.h"; sourceTree = "<group>"; };
+		BCE5152D1C9B535400572244 /* NSString+Read.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Read.m"; sourceTree = "<group>"; };
+		BCE5152E1C9B535400572244 /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
+		BCE5152F1C9B535400572244 /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
+		BCE515351C9B536B00572244 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		BCE515361C9B536B00572244 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		BCE515381C9C803600572244 /* minion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = minion.jpg; path = images/minion.jpg; sourceTree = SOURCE_ROOT; };
+		BCE5153F1C9CA33900572244 /* PatientDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PatientDetailView.h; path = ../PatientDetailView.h; sourceTree = "<group>"; };
+		BCE515401C9CA33900572244 /* PatientDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PatientDetailView.m; path = ../PatientDetailView.m; sourceTree = "<group>"; };
+		BCE515411C9CA33900572244 /* PatientDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PatientDetailView.xib; path = ../PatientDetailView.xib; sourceTree = "<group>"; };
+		BCE515511C9EE41200572244 /* CreateHospitalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateHospitalView.h; sourceTree = "<group>"; };
+		BCE515521C9EE41200572244 /* CreateHospitalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateHospitalView.m; sourceTree = "<group>"; };
+		BCE515531C9EE41200572244 /* CreateHospitalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateHospitalView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BCE514D71C98D0EC00572244 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCE514F01C98D0EC00572244 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCE514FB1C98D0EC00572244 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BCE514D11C98D0EC00572244 = {
+			isa = PBXGroup;
+			children = (
+				BCE514DC1C98D0EC00572244 /* Assignment 6 */,
+				BCE514F61C98D0EC00572244 /* Assignment 6Tests */,
+				BCE515011C98D0EC00572244 /* Assignment 6UITests */,
+				BCE514DB1C98D0EC00572244 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BCE514DB1C98D0EC00572244 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCE514DA1C98D0EC00572244 /* Assignment 6.app */,
+				BCE514F31C98D0EC00572244 /* Assignment 6Tests.xctest */,
+				BCE514FE1C98D0EC00572244 /* Assignment 6UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCE514DC1C98D0EC00572244 /* Assignment 6 */ = {
+			isa = PBXGroup;
+			children = (
+				BCE514E01C98D0EC00572244 /* AppDelegate.h */,
+				BCE514E11C98D0EC00572244 /* AppDelegate.m */,
+				BCE515121C9A4A8500572244 /* ViewController.h */,
+				BCE515131C9A4A8500572244 /* ViewController.m */,
+				BCE515141C9A4A8500572244 /* ViewController.xib */,
+				BCE515511C9EE41200572244 /* CreateHospitalView.h */,
+				BCE515521C9EE41200572244 /* CreateHospitalView.m */,
+				BCE515531C9EE41200572244 /* CreateHospitalView.xib */,
+				BCE515171C9A51C500572244 /* AddPatientFirstFormViewController.h */,
+				BCE515181C9A51C500572244 /* AddPatientFirstFormViewController.m */,
+				BCE515191C9A51C500572244 /* AddPatientFirstFormViewController.xib */,
+				BCE5151C1C9A584200572244 /* AddPatientSecondFormView.h */,
+				BCE5151D1C9A584200572244 /* AddPatientSecondFormView.m */,
+				BCE5151E1C9A584200572244 /* AddPatientSecondFormView.xib */,
+				BCE515211C9A690D00572244 /* PatientListView.h */,
+				BCE515221C9A690D00572244 /* PatientListView.m */,
+				BCE515231C9A690D00572244 /* PatientListView.xib */,
+				BCE5153F1C9CA33900572244 /* PatientDetailView.h */,
+				BCE515401C9CA33900572244 /* PatientDetailView.m */,
+				BCE515411C9CA33900572244 /* PatientDetailView.xib */,
+				BCE515281C9B535400572244 /* Hospital.h */,
+				BCE515291C9B535400572244 /* Hospital.m */,
+				BCE515351C9B536B00572244 /* Person.h */,
+				BCE515361C9B536B00572244 /* Person.m */,
+				BCE5152E1C9B535400572244 /* Patient.h */,
+				BCE5152F1C9B535400572244 /* Patient.m */,
+				BCE515261C9B535400572244 /* Department.h */,
+				BCE515271C9B535400572244 /* Department.m */,
+				BCE5152A1C9B535400572244 /* MedicalRecord.h */,
+				BCE5152B1C9B535400572244 /* MedicalRecord.m */,
+				BCE5152C1C9B535400572244 /* NSString+Read.h */,
+				BCE5152D1C9B535400572244 /* NSString+Read.m */,
+				BCE514EE1C98D0EC00572244 /* Info.plist */,
+				BCE514DD1C98D0EC00572244 /* Supporting Files */,
+			);
+			path = "Assignment 6";
+			sourceTree = "<group>";
+		};
+		BCE514DD1C98D0EC00572244 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BCE515381C9C803600572244 /* minion.jpg */,
+				BCE514DE1C98D0EC00572244 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BCE514F61C98D0EC00572244 /* Assignment 6Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BCE514F71C98D0EC00572244 /* Assignment_6Tests.m */,
+				BCE514F91C98D0EC00572244 /* Info.plist */,
+			);
+			path = "Assignment 6Tests";
+			sourceTree = "<group>";
+		};
+		BCE515011C98D0EC00572244 /* Assignment 6UITests */ = {
+			isa = PBXGroup;
+			children = (
+				BCE515021C98D0EC00572244 /* Assignment_6UITests.m */,
+				BCE515041C98D0EC00572244 /* Info.plist */,
+			);
+			path = "Assignment 6UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BCE514D91C98D0EC00572244 /* Assignment 6 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCE515071C98D0EC00572244 /* Build configuration list for PBXNativeTarget "Assignment 6" */;
+			buildPhases = (
+				BCE514D61C98D0EC00572244 /* Sources */,
+				BCE514D71C98D0EC00572244 /* Frameworks */,
+				BCE514D81C98D0EC00572244 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Assignment 6";
+			productName = "Assignment 6";
+			productReference = BCE514DA1C98D0EC00572244 /* Assignment 6.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BCE514F21C98D0EC00572244 /* Assignment 6Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCE5150A1C98D0EC00572244 /* Build configuration list for PBXNativeTarget "Assignment 6Tests" */;
+			buildPhases = (
+				BCE514EF1C98D0EC00572244 /* Sources */,
+				BCE514F01C98D0EC00572244 /* Frameworks */,
+				BCE514F11C98D0EC00572244 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCE514F51C98D0EC00572244 /* PBXTargetDependency */,
+			);
+			name = "Assignment 6Tests";
+			productName = "Assignment 6Tests";
+			productReference = BCE514F31C98D0EC00572244 /* Assignment 6Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BCE514FD1C98D0EC00572244 /* Assignment 6UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCE5150D1C98D0EC00572244 /* Build configuration list for PBXNativeTarget "Assignment 6UITests" */;
+			buildPhases = (
+				BCE514FA1C98D0EC00572244 /* Sources */,
+				BCE514FB1C98D0EC00572244 /* Frameworks */,
+				BCE514FC1C98D0EC00572244 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCE515001C98D0EC00572244 /* PBXTargetDependency */,
+			);
+			name = "Assignment 6UITests";
+			productName = "Assignment 6UITests";
+			productReference = BCE514FE1C98D0EC00572244 /* Assignment 6UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BCE514D21C98D0EC00572244 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Hari Panjwani";
+				TargetAttributes = {
+					BCE514D91C98D0EC00572244 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					BCE514F21C98D0EC00572244 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = BCE514D91C98D0EC00572244;
+					};
+					BCE514FD1C98D0EC00572244 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = BCE514D91C98D0EC00572244;
+					};
+				};
+			};
+			buildConfigurationList = BCE514D51C98D0EC00572244 /* Build configuration list for PBXProject "Assignment 6" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BCE514D11C98D0EC00572244;
+			productRefGroup = BCE514DB1C98D0EC00572244 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BCE514D91C98D0EC00572244 /* Assignment 6 */,
+				BCE514F21C98D0EC00572244 /* Assignment 6Tests */,
+				BCE514FD1C98D0EC00572244 /* Assignment 6UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BCE514D81C98D0EC00572244 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCE515391C9C803600572244 /* minion.jpg in Resources */,
+				BCE515551C9EE41200572244 /* CreateHospitalView.xib in Resources */,
+				BCE515251C9A690D00572244 /* PatientListView.xib in Resources */,
+				BCE515201C9A584200572244 /* AddPatientSecondFormView.xib in Resources */,
+				BCE515161C9A4A8500572244 /* ViewController.xib in Resources */,
+				BCE5151B1C9A51C500572244 /* AddPatientFirstFormViewController.xib in Resources */,
+				BCE515431C9CA33900572244 /* PatientDetailView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCE514F11C98D0EC00572244 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCE514FC1C98D0EC00572244 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BCE514D61C98D0EC00572244 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCE515321C9B535400572244 /* MedicalRecord.m in Sources */,
+				BCE5151F1C9A584200572244 /* AddPatientSecondFormView.m in Sources */,
+				BCE515311C9B535400572244 /* Hospital.m in Sources */,
+				BCE515151C9A4A8500572244 /* ViewController.m in Sources */,
+				BCE515541C9EE41200572244 /* CreateHospitalView.m in Sources */,
+				BCE515341C9B535400572244 /* Patient.m in Sources */,
+				BCE515241C9A690D00572244 /* PatientListView.m in Sources */,
+				BCE515421C9CA33900572244 /* PatientDetailView.m in Sources */,
+				BCE515371C9B536B00572244 /* Person.m in Sources */,
+				BCE514E21C98D0EC00572244 /* AppDelegate.m in Sources */,
+				BCE514DF1C98D0EC00572244 /* main.m in Sources */,
+				BCE5151A1C9A51C500572244 /* AddPatientFirstFormViewController.m in Sources */,
+				BCE515301C9B535400572244 /* Department.m in Sources */,
+				BCE515331C9B535400572244 /* NSString+Read.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCE514EF1C98D0EC00572244 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCE514F81C98D0EC00572244 /* Assignment_6Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCE514FA1C98D0EC00572244 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCE515031C98D0EC00572244 /* Assignment_6UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BCE514F51C98D0EC00572244 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCE514D91C98D0EC00572244 /* Assignment 6 */;
+			targetProxy = BCE514F41C98D0EC00572244 /* PBXContainerItemProxy */;
+		};
+		BCE515001C98D0EC00572244 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCE514D91C98D0EC00572244 /* Assignment 6 */;
+			targetProxy = BCE514FF1C98D0EC00572244 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BCE515051C98D0EC00572244 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BCE515061C98D0EC00572244 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BCE515081C98D0EC00572244 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Assignment 6/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neu.smartphone.Assignment-6";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BCE515091C98D0EC00572244 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Assignment 6/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neu.smartphone.Assignment-6";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BCE5150B1C98D0EC00572244 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Assignment 6Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neu.smartphone.Assignment-6Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Assignment 6.app/Assignment 6";
+			};
+			name = Debug;
+		};
+		BCE5150C1C98D0EC00572244 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Assignment 6Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neu.smartphone.Assignment-6Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Assignment 6.app/Assignment 6";
+			};
+			name = Release;
+		};
+		BCE5150E1C98D0EC00572244 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Assignment 6UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neu.smartphone.Assignment-6UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Assignment 6";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		BCE5150F1C98D0EC00572244 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Assignment 6UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neu.smartphone.Assignment-6UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Assignment 6";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BCE514D51C98D0EC00572244 /* Build configuration list for PBXProject "Assignment 6" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCE515051C98D0EC00572244 /* Debug */,
+				BCE515061C98D0EC00572244 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCE515071C98D0EC00572244 /* Build configuration list for PBXNativeTarget "Assignment 6" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCE515081C98D0EC00572244 /* Debug */,
+				BCE515091C98D0EC00572244 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCE5150A1C98D0EC00572244 /* Build configuration list for PBXNativeTarget "Assignment 6Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCE5150B1C98D0EC00572244 /* Debug */,
+				BCE5150C1C98D0EC00572244 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCE5150D1C98D0EC00572244 /* Build configuration list for PBXNativeTarget "Assignment 6UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCE5150E1C98D0EC00572244 /* Debug */,
+				BCE5150F1C98D0EC00572244 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BCE514D21C98D0EC00572244 /* Project object */;
+}

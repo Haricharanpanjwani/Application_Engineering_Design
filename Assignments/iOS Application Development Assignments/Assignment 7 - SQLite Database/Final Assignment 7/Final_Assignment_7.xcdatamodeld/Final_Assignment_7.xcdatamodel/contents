@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15D21" minimumToolsVersion="Automatic">
+    <entity name="Hospital" representedClassName="Hospital" syncable="YES">
+        <attribute name="hospitalName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="relationship" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Patient" syncable="YES"/>
+    </entity>
+    <entity name="Patient" representedClassName="Patient" parentEntity="Person" syncable="YES">
+        <attribute name="primaryPhysician" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Person" representedClassName="Person" isAbstract="YES" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Hospital" positionX="45" positionY="-118" width="119" height="73"/>
+        <element name="Patient" positionX="-281" positionY="59" width="128" height="58"/>
+        <element name="Person" positionX="-279" positionY="-126" width="126" height="103"/>
+    </elements>
+</model>

@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: AdvertApplication
+Bundle-SymbolicName: AdvertApplication
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: AdvertApplication.jar,
+ yoosoof/Desktop/hibernate-distribution-3.6.2.Final/hibernate3.jar
+Export-Package: com.yusuf.spring.controller,
+ com.yusuf.spring.dao,
+ com.yusuf.spring.exception,
+ com.yusuf.spring.pojo

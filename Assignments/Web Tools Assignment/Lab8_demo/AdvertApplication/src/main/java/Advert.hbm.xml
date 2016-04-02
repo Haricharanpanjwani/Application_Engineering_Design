@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.yusuf.spring.pojo.Advert" table="adverttable">
+    <id column="id" name="id" type="long">
+      <generator class="native"/>
+    </id>
+    <property column="message" name="message" type="string"/>
+    <property column="title" name="title" type="string"/>
+    <many-to-one class="com.yusuf.spring.pojo.User" column="user" foreign-key="fk_advert_user" name="user" not-null="true"/>
+  </class>
+</hibernate-mapping>

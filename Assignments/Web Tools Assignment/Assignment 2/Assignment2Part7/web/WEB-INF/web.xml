@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>CategorySelectServlet</servlet-name>
+        <servlet-class>Category.CategorySelectServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CategorySelectedServlet</servlet-name>
+        <servlet-class>Category.CategorySelectedServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ItemOrderServlet</servlet-name>
+        <servlet-class>Category.ItemOrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CategorySelectServlet</servlet-name>
+        <url-pattern>/categoryselectervlet.htm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CategorySelectedServlet</servlet-name>
+        <url-pattern>/categoryselectedservlet.htm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ItemOrderServlet</servlet-name>
+        <url-pattern>/cart.htm</url-pattern>
+        <url-pattern>/removeItem.htm</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

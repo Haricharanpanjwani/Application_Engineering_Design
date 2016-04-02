@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>LoginController</servlet-name>
+        <servlet-class>com.myapp.controller.LoginController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MessageServlet</servlet-name>
+        <servlet-class>com.myapp.controller.MessageController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginController</servlet-name>
+        <url-pattern>/Login.htm</url-pattern>
+        <url-pattern>/reply.htm</url-pattern>
+        <url-pattern>/logout.htm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MessageServlet</servlet-name>
+        <url-pattern>/sendMessage.htm</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+    <context-param>
+        <param-name>dbuser</param-name>
+        <param-value>student</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbpassword</param-name>
+        <param-value>p@ssw0rd</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbdriver</param-name>
+        <param-value>com.mysql.jdbc.Driver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dburl</param-name>
+        <param-value>jdbc:mysql://newton.neu.edu:3306/usersdb</param-value>
+    </context-param>
+</web-app>
