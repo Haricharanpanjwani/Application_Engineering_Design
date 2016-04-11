@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Create User Form</title>
+</head>
+<body>
+<form class="form-horizontal" role="form" id="createUserForm" method="POST", action="user.htm">
+    <div class="form-group">
+        <label for="title" name="title" class="col-sm-2 control-label">Create New User</label>
+
+        <div class="col-sm-10">
+        	<textarea rows="10" cols="10" id="title" name="title" placeholder="Input the JSON Data"></textarea>
+            <!-- <input type="text" class="form-control" name="ss" id="ss" placeholder="Input the JSON Data"> -->
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <input type="submit" name="create" value="Create User" class="btn btn-default" />
+        </div>
+    </div>
+</form>
+
+<script src="/js/jquery.js"></script>
+<script src="/js/angular.js"></script>
+<script src="/js/angular-route.js"></script>
+<script src="/js/angular-cookies.js"></script>
+<script src="/js/angular-sanitize.js"></script>
+<script src="/js/angular-resource.js"></script>
+
+<script>
+
+/* $(function sendData() {
+	alert("hello");
+	  $('input[name="#create"]').click(function() {
+	    var data = {
+	        title: $('#title').val(),	        
+	    };
+	    $.post("/url.htm", data, function(data) {
+	       console.log(data);
+	    });
+	  });
+	}); */
+
+
+/* function sendData() {
+	
+var formData = JSON.stringify($("#title").serializeArray());
+alert(formData);
+
+$.ajax({	
+	  type: "POST",
+	  url: "user.htm",
+	  data: formData,
+//	  success: function(){},
+	  dataType: "json",
+	  contentType : "application/json"
+	});
+}  */
+</script>
+</body>
+</html>
