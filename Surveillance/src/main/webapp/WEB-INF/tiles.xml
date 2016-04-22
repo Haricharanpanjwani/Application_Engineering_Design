@@ -19,7 +19,7 @@
 		<put-attribute name="body" value="/WEB-INF/views/loginFailed.jsp" />
 	</definition>
 
-	<definition name="adminView" extends="base.definition">
+	<definition name="Admin" extends="base.definition">
 		<put-attribute name="menu" value="/WEB-INF/views/admin/adminMenu.jsp" />
 		<put-attribute name="footer" value="/WEB-INF/views/admin/adminLogout.jsp" />
 	</definition>
@@ -45,6 +45,24 @@
 	<definition name="enterDirectory" extends="base.definition">
 		<put-attribute name="menu" value="/WEB-INF/views/admin/adminMenu.jsp" />
 		<put-attribute name="body" value="/WEB-INF/views/admin/enterpriseDirectory.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/admin/adminLogout.jsp" />
+	</definition>
+	
+	<definition name="reportGeneration" extends="base.definition">
+		<put-attribute name="menu" value="/WEB-INF/views/admin/adminMenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/reportGeneration.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/admin/adminLogout.jsp" />
+	</definition>
+	
+	<definition name="drugReport" extends="base.definition">
+		<put-attribute name="menu" value="/WEB-INF/views/admin/adminMenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/drugReport.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/admin/adminLogout.jsp" />
+	</definition>
+	
+	<definition name="generalReport" extends="base.definition">
+		<put-attribute name="menu" value="/WEB-INF/views/admin/adminMenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/generalReport.jsp" />
 		<put-attribute name="footer" value="/WEB-INF/views/admin/adminLogout.jsp" />
 	</definition>
 	

@@ -23,13 +23,23 @@ td {
 </style>
 </head>
 <body>
-	
+	<form action="enterpriseDirectory.htm" method="POST" onchange="submit()" >
 	<div align="left"
 		style="width: 520px; height: 350px; overflow: scroll; margin-left: 100px">
 		<table class="t2" border="2" cellpadding="5" cellspacing="2"
-			width="500">
-			<tr><td colspan="3" align="center">Welcome:${sessionScope.userAccount.getUserName()}</td></tr>
-					<tr><td colspan="3" align="center">Enterprise Table</td></tr>
+			width="500">			
+			<tr>
+				<td colspan="3" align="center">Welcome: ${sessionScope.userAccount.getUserName()}</td>
+			</tr>
+			<tr>
+				<td colspan="3" align="center">Enterprise Table</td>
+			</tr>
+			<tr>
+				<td><input type="radio" name="filter" value="manufacturer">Manufacturer</td>
+				<td><input type="radio" name="filter" value="distributor">Distributor</td>
+				<td><input type="radio" name="filter" value="dispenser">Dispenser</td>
+				<td><input type="radio" name="filter" value="all">All</td>
+			</tr>		
 			<tr>
 				<th>EnterpriseId</th>
 				<th>EnterpriseName</th>
@@ -45,7 +55,8 @@ td {
 
 			</c:forEach>
 		</table>
+		<input type="hidden" name="role" value="general" />
 	</div>
-
+	</form>
 </body>
 </html>

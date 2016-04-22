@@ -2,12 +2,13 @@ package com.spring.forensic.dao;
 
 import java.util.List;
 
-
-
-
+import org.bouncycastle.asn1.isismtt.x509.Restriction;
+import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Restrictions;
 
 import com.spring.forensic.pojo.Drug;
 import com.spring.forensic.pojo.Enterprise;
@@ -134,5 +135,28 @@ public class DrugDao extends DAO {
 			transaction.commit();			
 			return true;
 		}
+	}
+	
+	public List<Drug> getAllDrugs(String filter)	{
+		
+		Session session = getSession();
+		Criteria criteria = session.createCriteria(Drug.class);
+		
+		if(filter.equals("desc")) {					
+			criteria.addOrder(Order.desc("drugName"));
+		} else if(filter.equals("asc")) {
+			criteria.addOrder(Order.asc("drugName"));
+		} else if(filter.equals("100")) {
+			criteria.add(Restrictions.gt("quantity", 100));
+			criteria.addOrder(Order.asc("quantity"));
+		}
+		else if(filter.equals("200")) {
+			criteria.add(Restrictions.gt("quantity", 200));
+			criteria.addOrder(Order.asc("quantity"));
+		}
+		
+		List<Drug> drugList = criteria.list();
+	
+		return drugList;
 	}
 }

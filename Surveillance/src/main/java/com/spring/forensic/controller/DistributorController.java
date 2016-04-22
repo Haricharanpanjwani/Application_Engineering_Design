@@ -35,24 +35,22 @@ public class DistributorController {
 	private WorkRequestDao workRequestDao;
 	
 	// distributor places order , just redirection
-			@RequestMapping(value = "/placeOrderDistributor.htm")
-			public ModelAndView distributorplace(HttpServletRequest r) {
+	@RequestMapping(value = "/placeOrderDistributor.htm")
+	public ModelAndView distributorplace(HttpServletRequest r) {
 
-				HttpSession requestSession = r.getSession();
+		HttpSession requestSession = r.getSession();
+				
+		List manList = enterpriseDao.getEnterprise("Manufacturer");
 
-			//	EnterpriseDao e = new EnterpriseDao();
-				List manList = enterpriseDao.getManufacturer();
+		UserAccount u = (UserAccount) requestSession.getAttribute("userAccount");
 
-				UserAccount u = (UserAccount) requestSession
-						.getAttribute("userAccount");
+		System.out.println(manList.size());
 
-				System.out.println(manList.size());
+		requestSession.setAttribute("userAccount", u);
+		requestSession.setAttribute("enterprise", u.getEnterprise());
 
-				requestSession.setAttribute("userAccount", u);
-				requestSession.setAttribute("enterprise", u.getEnterprise());
-
-				return new ModelAndView("placeOrderDistributor", "manlist", manList);
-			}
+		return new ModelAndView("placeOrderDistributor", "manlist", manList);
+	}
 
 			// distributor placing request to manufacturer
 			@RequestMapping(value = "/orderRequestDistributor.htm")

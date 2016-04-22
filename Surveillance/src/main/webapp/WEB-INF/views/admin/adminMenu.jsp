@@ -38,6 +38,7 @@ a:hover
 <tr> <td>  <a href="addUser.htm"> Add User </a> </td></tr>
 <tr> <td>  <a href="userDirectory.htm"> User Directory </a> </td></tr>
 <tr> <td>  <a href="enterpriseDirectory.htm"> Enterprise Directory </a> </td></tr>
+<tr> <td>  <a href="reportGeneration.htm"> Report Generation </a> </td></tr>
 
 </table>
 

@@ -34,7 +34,7 @@ td {
 
 <script type="text/javascript">
 
-function getData(eid) {
+function getData(eid) {	
 	$.ajax({
 		url:"givedrug.htm", data: {'comp' : eid},
 		success : function(response){

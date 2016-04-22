@@ -79,7 +79,7 @@ public class HomeController {
 		if (userAccount == null)
 			return "loginFailed";
 
-		String userView = userAccount.getView();
+		String userView = userAccount.getRole();
 		Enterprise enterprise = userAccount.getEnterprise();
 		
 		HttpSession requestSession = request.getSession(true);
@@ -182,15 +182,28 @@ public class HomeController {
 		requestSession.setAttribute("userAccount",
 		requestSession.getAttribute("userAccount"));
 		requestSession.setAttribute("enterprise", enterprise);
-
-		List<Enterprise> enterpriseList = enterpriseDao.getEnterprise();
+		
+		String filter = "";		
+		List<Enterprise> enterpriseList = enterpriseDao.getEnterprise(filter);
+		
+		if(request.getParameter("role") != null) {										
+				
+			if(request.getParameter("filter") != null) {
+				filter = request.getParameter("filter");
+			}
+			System.out.println(filter);	
+							
+			enterpriseList = enterpriseDao.getEnterprise(filter);
+		}				
 
 		return new ModelAndView("enterDirectory", "entlist", enterpriseList);
 	}
 
 	@RequestMapping(value = "/userDirectory.htm")
 	public ModelAndView userdirectory(HttpServletRequest r) {
-
+		
+		System.out.println("In user directory");
+		
 		HttpSession requestSession = r.getSession();
 
 		UserAccount userAccount = (UserAccount) requestSession.getAttribute("userAccount");
@@ -199,6 +212,43 @@ public class HomeController {
 
 		List userList = userAccountDao.getUserAccount();
 		return new ModelAndView("userAdded", "userList", userList);
+	}
+	
+	@RequestMapping(value = "/reportGeneration.htm")
+	public String reportGeneration() {		
+		return "reportGeneration";
+	}
+	
+	@RequestMapping(value = "/reportType.htm")
+	public ModelAndView reportGenerationType(HttpServletRequest request) {
+		
+		HttpSession requestSession = request.getSession();		
+		
+		String type = request.getParameter("type");		
+		System.out.println(type);					
+		
+		requestSession.setAttribute("userAccount",
+		requestSession.getAttribute("userAccount"));		
+		
+		if(type.equals("drugs")) {
+			
+			String filter = "asc";
+			
+			if(request.getParameter("filter") != null) {
+				filter = request.getParameter("filter");
+			}
+			System.out.println(filter);	
+			
+			List<Drug> drugList = drugDao.getAllDrugs(filter);
+			requestSession.setAttribute("drugList", drugList);
+			return new ModelAndView("drugReport", "drugList", drugList);
+		}
+		else if(type.equals("manufacturer")) {
+			
+//			List manufacturerList = (List) dfghj;
+//			return new ModelAndView("generalReport", "manufacturerList", manufacturerList);
+		}		
+		return null;
 	}
 	
 	@RequestMapping(value = "/logout.htm")
@@ -231,12 +281,12 @@ public class HomeController {
 	}
 	
 	// Generating Report 
-		@RequestMapping(value="/generateReport.htm")
-		public ModelAndView reportman(HttpServletRequest r)	{
+	@RequestMapping(value="/generateReport.htm")
+	public ModelAndView reportman(HttpServletRequest r)	{
 			
-			Enterprise e = (Enterprise)r.getSession().getAttribute("enterprise");
-			List drugList = drugDao.getDrug(e);
+		Enterprise e = (Enterprise)r.getSession().getAttribute("enterprise");
+		List drugList = drugDao.getDrug(e);
 			
-			return new ModelAndView("PdfView","drugList",drugList);
-		}
+		return new ModelAndView("PdfView","drugList",drugList);
+	}
 }

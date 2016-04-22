@@ -30,8 +30,6 @@ td {
 
 </head>
 <body>
-
-
 	<div align="left"
 		style="width: 570px; height: 350px; overflow: scroll; margin-left: 75px">
 		<table class="t12" border="2" cellpadding="5" cellspacing="2"

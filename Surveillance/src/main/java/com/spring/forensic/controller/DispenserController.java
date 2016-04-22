@@ -34,100 +34,98 @@ public class DispenserController {
 	@Autowired
 	private WorkRequestDao workRequestDao;
 	
-			@RequestMapping(value = "/placeOrderDispenser.htm")
-			public ModelAndView dispenserplace(HttpServletRequest r) {
+	@RequestMapping(value = "/placeOrderDispenser.htm")
+	public ModelAndView dispenserplace(HttpServletRequest r) {
 
-				HttpSession requestSession = r.getSession();
+		HttpSession requestSession = r.getSession();
 
-			//	EnterpriseDao e = new EnterpriseDao();
-				List disList = enterpriseDao.getDistributor();
+	//	EnterpriseDao e = new EnterpriseDao();
+		List disList = enterpriseDao.getEnterprise("Distributor");
 
-				UserAccount u = (UserAccount) requestSession
-						.getAttribute("userAccount");
+		UserAccount u = (UserAccount) requestSession
+				.getAttribute("userAccount");
 
-				System.out.println(disList.size());
+		System.out.println(disList.size());
 
-				requestSession.setAttribute("userAccount", u);
-				requestSession.setAttribute("enterprise", u.getEnterprise());
+		requestSession.setAttribute("userAccount", u);
+		requestSession.setAttribute("enterprise", u.getEnterprise());
 
-				return new ModelAndView("placeOrderDispenser", "dislist", disList);
-			}
+		return new ModelAndView("placeOrderDispenser", "dislist", disList);
+	}
 
-			// dispenser placing request to distributor
-			@RequestMapping(value = "/orderRequestDispenser.htm")
-			public ModelAndView disporderitem(HttpServletRequest r) {
-				HttpSession requestSession = r.getSession();
+	// dispenser placing request to distributor
+	@RequestMapping(value = "/orderRequestDispenser.htm")
+	public ModelAndView disporderitem(HttpServletRequest r) {
+		HttpSession requestSession = r.getSession();
 
-				String drugName = r.getParameter("drugName");
-				String quantity = r.getParameter("quantity");
-				int q = Integer.parseInt(quantity);
-				String eId = r.getParameter("dis");
-				int er = Integer.parseInt(eId);
+		String drugName = r.getParameter("drugName");
+		String quantity = r.getParameter("quantity");
+		int q = Integer.parseInt(quantity);
+		String eId = r.getParameter("dis");
+		int er = Integer.parseInt(eId);
 
-			//	EnterpriseDao enterpriseDao = new EnterpriseDao();
-				Enterprise e = enterpriseDao.getEnterpriseById(er);
+	//	EnterpriseDao enterpriseDao = new EnterpriseDao();
+		Enterprise e = enterpriseDao.getEnterpriseById(er);
 
-				WorkRequest workRequest = new WorkRequest();
-			//	WorkRequestDao workRequestDao = new WorkRequestDao();
+		WorkRequest workRequest = new WorkRequest();
+	//	WorkRequestDao workRequestDao = new WorkRequestDao();
 
-				workRequest.setDrugName(drugName);
-				workRequest.setQuantity(q);
-				workRequest.setEnterpriseSender((Enterprise) requestSession
-						.getAttribute("enterprise"));
-				workRequest.setEnterpriseReceiver(e);
-				workRequest.setStatus("Sent by Dispenser");
+		workRequest.setDrugName(drugName);
+		workRequest.setQuantity(q);
+		workRequest.setEnterpriseSender((Enterprise) requestSession
+				.getAttribute("enterprise"));
+		workRequest.setEnterpriseReceiver(e);
+		workRequest.setStatus("Sent by Dispenser");
 
-				workRequestDao.save(workRequest);
+		workRequestDao.save(workRequest);
 
-				List reList = workRequestDao.getSenderRequest(((Enterprise) requestSession
-								.getAttribute("enterprise")).getEnterpriseId());
-				requestSession.setAttribute("userAccount",
-						requestSession.getAttribute("userAccount"));
-				requestSession.setAttribute("enterprise",
-						requestSession.getAttribute("enterprise"));
+		List reList = workRequestDao.getSenderRequest(((Enterprise) requestSession
+						.getAttribute("enterprise")).getEnterpriseId());
+		requestSession.setAttribute("userAccount",
+				requestSession.getAttribute("userAccount"));
+		requestSession.setAttribute("enterprise",
+				requestSession.getAttribute("enterprise"));
 
-				return new ModelAndView("orderRequestDispenser", "slist", reList);
+		return new ModelAndView("orderRequestDispenser", "slist", reList);
 
-			}
+	}
 
-			// dispenser already requested drugs , just redirection
-			@RequestMapping(value = "/dispenserRequested.htm")
-			public ModelAndView dispenserrequested(HttpServletRequest h) {
-				Enterprise e = (Enterprise) h.getSession().getAttribute("enterprise");
+	// dispenser already requested drugs , just redirection
+	@RequestMapping(value = "/dispenserRequested.htm")
+	public ModelAndView dispenserrequested(HttpServletRequest h) {
+		Enterprise e = (Enterprise) h.getSession().getAttribute("enterprise");
 
-				HttpSession requestSession = h.getSession();
+		HttpSession requestSession = h.getSession();
 
-			//	WorkRequestDao workRequestDao = new WorkRequestDao();
+	//	WorkRequestDao workRequestDao = new WorkRequestDao();
 
-				List slist = workRequestDao.getSenderRequest(e.getEnterpriseId());
+		List slist = workRequestDao.getSenderRequest(e.getEnterpriseId());
 
-				requestSession.setAttribute("userAccount",
-						requestSession.getAttribute("userAccount"));
-				requestSession.setAttribute("enterprise", e);
+		requestSession.setAttribute("userAccount",
+				requestSession.getAttribute("userAccount"));
+		requestSession.setAttribute("enterprise", e);
 
-				return new ModelAndView("orderRequestDispenser", "slist", slist);
+		return new ModelAndView("orderRequestDispenser", "slist", slist);
 
-			}
+	}
+	
+	// dispenser drug directory
+	@RequestMapping(value = "/drugDirectoryDispenser.htm")
+	public ModelAndView drugdisp(HttpServletRequest h) {
+		Enterprise e = (Enterprise) h.getSession().getAttribute("enterprise");
 
-			// dispenser drug directory
-			@RequestMapping(value = "/drugDirectoryDispenser.htm")
-			public ModelAndView drugdisp(HttpServletRequest h) {
-				Enterprise e = (Enterprise) h.getSession().getAttribute("enterprise");
+		HttpSession requestSession = h.getSession();
 
-				HttpSession requestSession = h.getSession();
+		List drugList = drugDao.getDrug(e);
 
-			//	DrugDao drugDao = new DrugDao();
+		UserAccount u = (UserAccount) requestSession
+				.getAttribute("userAccount");
 
-				List drugList = drugDao.getDrug(e);
+		requestSession.setAttribute("userAccount", u);
+		requestSession.setAttribute("enterprise", e);
 
-				UserAccount u = (UserAccount) requestSession
-						.getAttribute("userAccount");
+		return new ModelAndView("drugDirectoryDispenser", "drugList", drugList);
 
-				requestSession.setAttribute("userAccount", u);
-				requestSession.setAttribute("enterprise", e);
-
-				return new ModelAndView("drugDirectoryDispenser", "drugList", drugList);
-
-			}
+	}
 
 }
