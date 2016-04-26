@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -14,6 +15,8 @@ import com.spring.forensic.dao.DrugsDao;
 import com.spring.forensic.dao.EnterprisesDao;
 import com.spring.forensic.dao.UserAccountsDao;
 import com.spring.forensic.dao.WorkRequestsDao;
+import com.spring.forensic.email.EmailMessage;
+import com.spring.forensic.email.EmailSender;
 import com.spring.forensic.pojo.Enterprises;
 import com.spring.forensic.pojo.UserAccounts;
 import com.spring.forensic.pojo.WorkRequests;
@@ -46,7 +49,6 @@ public class DispensersController {
 		return new ModelAndView("dispenserPlaceOrder", "dispenserList", dispenserList);
 	}
 
-	// dispenser placing request to distributor
 	@RequestMapping(value = "/dispenserOrderRequest.htm")
 	public ModelAndView dispenserOrderRequest(HttpServletRequest request) {
 		
@@ -73,12 +75,23 @@ public class DispensersController {
 		List senderList = workRequestsDao.getSenderRequests(((Enterprises) session.getAttribute("enterp")).getEnterpriseId());
 		session.setAttribute("user", session.getAttribute("user"));
 		session.setAttribute("enterp", session.getAttribute("enterp"));
+		
+		//Sending Mail
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("emailConfig.xml");
+		EmailSender emailSender=(EmailSender)context.getBean("emailSenderBean");
+		
+		UserAccounts userAccount = (UserAccounts)session.getAttribute("user");
+		
+		EmailMessage emailMessage = new EmailMessage();
+		emailMessage.setReceiverEmailAddress(userAccount.geteMail());
+		emailMessage.setSubject("Order has been successfully Placed");
+		emailSender.sendEmail(emailMessage, userAccount, workRequests);		
 
 		return new ModelAndView("dispenserRequestOrder", "senderList", senderList);
 		
 	}
 
-	// dispenser already requested drugs , just redirection
+
 	@RequestMapping(value = "/dispenserRequestedDrug.htm")
 	public ModelAndView dispenserRequestedDrug(HttpServletRequest request) {
 		

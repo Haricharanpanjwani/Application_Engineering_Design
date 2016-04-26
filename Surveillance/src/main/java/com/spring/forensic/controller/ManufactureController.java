@@ -47,14 +47,14 @@ public class ManufactureController {
 	
 	@RequestMapping(value = "/drugAddProcess.htm")
 	public ModelAndView drugAddProcess(HttpServletRequest request) {
+		
+		HttpSession session = request.getSession();
 
 		Drugs newDrug = new Drugs();
 
 		Enterprises enterprise = (Enterprises) request.getSession().getAttribute("enterp");
 		
-		int quantity = Integer.parseInt(request.getParameter("quantity"));
-		
-		HttpSession session = request.getSession();
+		int quantity = Integer.parseInt(request.getParameter("quantity"));		
 
 		UserAccounts userAccount = (UserAccounts) session.getAttribute("user");
 

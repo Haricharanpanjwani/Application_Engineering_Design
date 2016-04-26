@@ -40,7 +40,7 @@ public class UserAccountsDao extends DAO {
         QueryBuilder queryBuilder = fullTextSession.getSearchFactory().buildQueryBuilder().forEntity(UserAccounts.class).get();
         org.apache.lucene.search.Query luceneQuery = queryBuilder.keyword().wildcard().onFields("firstName", "lastName", "userName").matching("*"+queryString.toLowerCase()+"*").createQuery();
  
-        // wrap Lucene query in a javax.persistence.Query
+       
         org.hibernate.Query fullTextQuery = fullTextSession.createFullTextQuery(luceneQuery, UserAccounts.class);
          
         List<UserAccounts> userAccountList = fullTextQuery.list();

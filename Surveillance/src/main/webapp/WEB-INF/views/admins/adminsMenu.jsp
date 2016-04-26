@@ -17,10 +17,6 @@
 		<tr> <td><a href="enterprisesDirectory.htm"> Enterprise Directory </a></td> </tr>
 		
 		<tr> <td><a href="drugReport.htm"> Drug Inventory </a></td> </tr>
-		
-		<tr> <td><a href="reportGeneration.htm"> Report </a></td> </tr>
-		
-		<tr> <td><a href="sendMail.htm"> Send Mail </a></td> </tr>
 
 	</table>
 

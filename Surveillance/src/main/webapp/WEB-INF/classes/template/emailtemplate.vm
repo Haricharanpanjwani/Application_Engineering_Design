@@ -1,0 +1,7 @@
+Dear ${firstName} ${lastName}
+
+Your order has been successfully placed for medicine: ${medicine} and quantity: ${quantity}
+
+It will be shipped within 2 days. You can check status on the website.
+
+Thanks

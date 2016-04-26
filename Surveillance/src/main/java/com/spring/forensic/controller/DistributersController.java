@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -14,6 +15,8 @@ import com.spring.forensic.dao.DrugsDao;
 import com.spring.forensic.dao.EnterprisesDao;
 import com.spring.forensic.dao.UserAccountsDao;
 import com.spring.forensic.dao.WorkRequestsDao;
+import com.spring.forensic.email.EmailMessage;
+import com.spring.forensic.email.EmailSender;
 import com.spring.forensic.pojo.Enterprises;
 import com.spring.forensic.pojo.UserAccounts;
 import com.spring.forensic.pojo.WorkRequests;
@@ -31,7 +34,7 @@ public class DistributersController {
 	@Autowired
 	private WorkRequestsDao workRequestsDao;
 	
-	// distributor places order , just redirection
+	
 	@RequestMapping(value = "/distributorPlaceOrder.htm")
 	public ModelAndView distributorPlaceOrder(HttpServletRequest request) {
 
@@ -47,7 +50,6 @@ public class DistributersController {
 		return new ModelAndView("distributorPlaceOrder", "manufactureList", manufactureList);
 	}
 	
-	// distributor placing request to manufacturer
 	@RequestMapping(value = "/distributorRequestOrder.htm")
 	public ModelAndView distributorRequestOrder(HttpServletRequest request) {
 		
@@ -74,11 +76,23 @@ public class DistributersController {
 		List receiverList = workRequestsDao.getSenderRequests(((Enterprises) session.getAttribute("enterp")).getEnterpriseId());
 		session.setAttribute("user", session.getAttribute("user"));
 		session.setAttribute("enterp", session.getAttribute("enterp"));
+		
+		//Sending Mail
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("emailConfig.xml");
+		EmailSender emailSender=(EmailSender)context.getBean("emailSenderBean");
+		
+		UserAccounts userAccount = (UserAccounts)session.getAttribute("user");
+		
+		EmailMessage emailMessage = new EmailMessage();
+		emailMessage.setReceiverEmailAddress(userAccount.geteMail());
+		emailMessage.setSubject("Order Successfully Placed");
+		//emailMessage.setMessageBody("How you doing");
+		emailSender.sendEmail(emailMessage, userAccount, workRequests);
 
 		return new ModelAndView("distributorRequestOrder", "senderList", receiverList);
 	}
 	
-	// distributor already requested drugs , just redirection
+	
 	@RequestMapping(value = "/distributorsRequest.htm")
 	public ModelAndView distributorsRequest(HttpServletRequest request) {
 		
@@ -116,7 +130,7 @@ public class DistributersController {
 
 	}
 	
-	// distributor received orders , just redirection
+	
 	@RequestMapping(value = "/distributorReceiveOrder.htm")
 	public ModelAndView distributorReceiveOrder(HttpServletRequest request) {
 				

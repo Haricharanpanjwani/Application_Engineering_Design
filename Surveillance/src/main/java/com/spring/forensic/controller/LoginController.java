@@ -1,7 +1,6 @@
 package com.spring.forensic.controller;
 
 import java.util.List;
-import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,7 +9,6 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -20,6 +18,8 @@ import com.spring.forensic.dao.DrugsDao;
 import com.spring.forensic.dao.EnterprisesDao;
 import com.spring.forensic.dao.UserAccountsDao;
 import com.spring.forensic.dao.WorkRequestsDao;
+import com.spring.forensic.email.EmailMessage;
+import com.spring.forensic.email.EmailSender;
 import com.spring.forensic.pojo.Drugs;
 import com.spring.forensic.pojo.Enterprises;
 import com.spring.forensic.pojo.UserAccounts;
@@ -160,13 +160,11 @@ public class LoginController {
 		
 		System.out.println("User not found!! Creating new user");
 		
-		// setting Enterprises
 		Enterprises enterprise = new Enterprises();
 		enterprise.setEnterpriseName(enterpriseName);
 		enterprise.setRole(role);
 		enterprisesDao.saveEnterprises(enterprise);
 
-		// Setting UserAccounts
 		userAcc.setCity(address);
 		userAcc.setFirstName(firstName);
 		userAcc.setLastName(lastName);
@@ -254,7 +252,7 @@ public class LoginController {
 //			System.out.println(user);
 //		
 //		session.setAttribute("userList", userList);
-		drugsDao.getAllDrugs("asc");//(25, 100);
+		drugsDao.getAllDrugs("asc");
 		return null;
 	}
 
@@ -307,7 +305,6 @@ public class LoginController {
 		System.out.println("report: " + reportList.size());
 		
 		return new ModelAndView("reportGeneration", "reportList", reportList);
-		//return "reportGeneration";
 	}
 	
 	//@RequestMapping(value = "/drugReport.htm")
@@ -383,21 +380,18 @@ public class LoginController {
 		return new ModelAndView("PdfView","drugList",drugsList);
 	}
 	
-	// Send Email
-//	@RequestMapping(value="/admin/sendMail.htm")
-//	public ModelAndView sendMail(HttpServletRequest r)	{
-//				
-//		  Mail mail = new Mail();
-//		  mail.setMailFrom("haricharan.panjwani@gmail.com");
-//		  mail.setMailTo("panjwani.h@husky.neu.edu");
-//		  mail.setMailSubject("Subject - Send Email using Spring Velocity Template");
-//		  mail.setTemplateName("views/emailtemplate.vm");		  
-//		  ApplicationContext context = new ClassPathXmlApplicationContext();
-//		  //ApplicationContext context = new ClassPathXmlApplicationContext("/WEB-INF/spring/appServlet/servlet-context.xml");
-//		  System.out.println("Path :" + context.getDisplayName());
-//		  Mailer mailer = (Mailer) context.getBean(Mailer.class);
-//		  mailer.sendMail(mail);
-//				
-//		return new ModelAndView("login");
-//	}
+		@RequestMapping(value="/admin/sendMail.htm")
+		public ModelAndView sendMail(HttpServletRequest r)	{
+					
+			  ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("emailConfig.xml");
+			  EmailSender emailSender=(EmailSender)context.getBean("emailSenderBean");
+			  
+			  EmailMessage emailMessage = new EmailMessage();
+			  emailMessage.setReceiverEmailAddress("");
+			  emailMessage.setSubject("Hello");
+			  emailMessage.setMessageBody("How you doing");
+			  //emailSender.sendEmail(emailMessage);
+
+			return new ModelAndView("login");
+		}
 }

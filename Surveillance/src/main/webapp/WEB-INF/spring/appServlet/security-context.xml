@@ -10,7 +10,6 @@
 
 <http auto-config="true" use-expressions="true">
    <intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"/>
-   <intercept-url pattern="/**" access="" />
 	   
 	   <form-login 
 	   login-processing-url="/perform_login" 

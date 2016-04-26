@@ -1,8 +1,0 @@
-<html>
-<body>
-<h3>You password has been reset.</h3>
-<p>${user.firstName} ${user.lastName}</p>
-<p>We have received a request to reset your password.</p>
-<p>Your password has been reset to: ${newPassword}
-</body>
-</html>
