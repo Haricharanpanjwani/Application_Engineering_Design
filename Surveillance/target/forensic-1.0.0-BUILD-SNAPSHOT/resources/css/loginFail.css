@@ -1,0 +1,29 @@
+table.loginFail
+{
+	width:400px;
+  	height:180px; 	
+ 	opacity:0.7; 		
+ 	background-color:#e0e0e0;
+ 	margin:30px 50px;  	
+ 	border:silver;
+ 	border-radius :10px;
+ 	padding:"20";
+ 	border-spacing:"2";
+}
+
+td 
+{
+	
+  	text-align: center;
+    font-weight:600;
+  
+}
+#submitButton
+{
+	font-weight:bolder;
+	font-size: 15px;
+	width:150px;
+	height:30px;
+	border-radius :2px;
+	background-color: #808080;	
+}

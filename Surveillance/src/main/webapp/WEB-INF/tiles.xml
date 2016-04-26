@@ -10,148 +10,156 @@
 		<put-attribute name="body" value="" />
 		<put-attribute name="footer" value="" />
 	</definition>
-
-	<definition name="myHome" extends="base.definition">
-		<put-attribute name="body" value="/WEB-INF/views/myHome.jsp" />
+	
+	<definition name="securityLogin" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/views/login.jsp" />
+	</definition>
+	
+	<definition name="home" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/views/home.jsp" />
 	</definition>
 
-	<definition name="loginFailed" extends="base.definition">
-		<put-attribute name="body" value="/WEB-INF/views/loginFailed.jsp" />
+	<definition name="login" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/views/login.jsp" />
+	</definition>
+
+	<definition name="loginFail" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/views/loginFail.jsp" />
 	</definition>
 
 	<definition name="Admin" extends="base.definition">
-		<put-attribute name="menu" value="/WEB-INF/views/admin/adminMenu.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/admin/adminLogout.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/admins/adminsMenu.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/admins/adminsLogout.jsp" />
 	</definition>
 
-	<definition name="registerUser" extends="base.definition">
-		<put-attribute name="menu" value="/WEB-INF/views/admin/adminMenu.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/admin/register.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/admin/adminLogout.jsp" />
+	<definition name="registerUserAccount" extends="base.definition">
+		<put-attribute name="menu" value="/WEB-INF/views/admins/adminsMenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/admins/registeration.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/admins/adminsLogout.jsp" />
 	</definition>
 
-	<definition name="alreadyExist" extends="base.definition">
-		<put-attribute name="menu" value="/WEB-INF/views/admin/adminMenu.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/userAlreadyExist.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/admin/adminLogout.jsp" />
+	<definition name="userExist" extends="base.definition">
+		<put-attribute name="menu" value="/WEB-INF/views/admins/adminsMenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/userExist.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/admins/adminsLogout.jsp" />
 	</definition>
 
-	<definition name="userAdded" extends="base.definition">
-		<put-attribute name="menu" value="/WEB-INF/views/admin/adminMenu.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/admin/userDirectory.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/admin/adminLogout.jsp" />
+	<definition name="userAccountAdded" extends="base.definition">
+		<put-attribute name="menu" value="/WEB-INF/views/admins/adminsMenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/admins/usersDirectory.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/admins/adminsLogout.jsp" />
 	</definition>
 
-	<definition name="enterDirectory" extends="base.definition">
-		<put-attribute name="menu" value="/WEB-INF/views/admin/adminMenu.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/admin/enterpriseDirectory.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/admin/adminLogout.jsp" />
+	<definition name="enterprisesDirectory" extends="base.definition">
+		<put-attribute name="menu" value="/WEB-INF/views/admins/adminsMenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/admins/enterprisesDirectory.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/admins/adminsLogout.jsp" />
 	</definition>
 	
 	<definition name="reportGeneration" extends="base.definition">
-		<put-attribute name="menu" value="/WEB-INF/views/admin/adminMenu.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/admin/reportGeneration.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/admin/adminLogout.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/admins/adminsMenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/admins/reportGeneration.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/admins/adminsLogout.jsp" />
 	</definition>
 	
 	<definition name="drugReport" extends="base.definition">
-		<put-attribute name="menu" value="/WEB-INF/views/admin/adminMenu.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/admin/drugReport.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/admin/adminLogout.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/admins/adminsMenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/admins/drugReport.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/admins/adminsLogout.jsp" />
 	</definition>
 	
 	<definition name="generalReport" extends="base.definition">
-		<put-attribute name="menu" value="/WEB-INF/views/admin/adminMenu.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/admin/generalReport.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/admin/adminLogout.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/admins/adminsMenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/admins/generalReport.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/admins/adminsLogout.jsp" />
 	</definition>
 	
 	<definition name="Manufacturer" extends="base.definition">
-		<put-attribute name="menu" value="/WEB-INF/views/manufacturer/manufacturerMenu.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/manufacturer/manufacturerLogout.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/manufacturers/manufacturerMenu.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/manufacturers/manufacturersLogout.jsp" />
 	</definition>
 	
-	<definition name="addDrug" extends="base.definition">
-		<put-attribute name="menu" value="/WEB-INF/views/manufacturer/manufacturerMenu.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/manufacturer/addDrug.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/manufacturer/manufacturerLogout.jsp" />
+	<definition name="drugAdded" extends="base.definition">
+		<put-attribute name="menu" value="/WEB-INF/views/manufacturers/manufacturerMenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/manufacturers/addDrugs.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/manufacturers/manufacturersLogout.jsp" />
 	</definition>
 	
-	<definition name="drugDirectory" extends="base.definition">
+	<definition name="manufacturerDrugDirectory" extends="base.definition">
 		<put-attribute name="menu"
-			value="/WEB-INF/views/manufacturer/manufacturerMenu.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/manufacturer/drugDirectory.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/manufacturer/manufacturerLogout.jsp" />
+			value="/WEB-INF/views/manufacturers/manufacturerMenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/manufacturers/manufacturerDrugDirectory.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/manufacturers/manufacturersLogout.jsp" />
 	</definition>
 	
 	<definition name="Distributor" extends="base.definition">
-		<put-attribute name="menu" value="/WEB-INF/views/distributor/distributorMenu.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/distributor/distributorLogout.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/distributors/distributorsMenu.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/distributors/distributorsLogout.jsp" />
 	</definition>
 	
 	<definition name="Dispenser" extends="base.definition">
-		<put-attribute name="menu" value="/WEB-INF/views/dispenser/dispenserMenu.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/dispenser/dispenserLogout.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/dispensers/dispensersMenu.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/dispensers/dispensersLogout.jsp" />
 	</definition>
 	
-	<definition name="placeOrderDispenser" extends="base.definition">
-		<put-attribute name="menu" value="/WEB-INF/views/dispenser/dispenserMenu.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/dispenser/placeOrderDispenser.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/dispenser/dispenserLogout.jsp" />
+	<definition name="dispenserPlaceOrder" extends="base.definition">
+		<put-attribute name="menu" value="/WEB-INF/views/dispensers/dispensersMenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/dispensers/dispenserPlaceOrder.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/dispensers/dispensersLogout.jsp" />
 	</definition>
 	
-	<definition name="placeOrderDistributor" extends="base.definition">
-		<put-attribute name="menu" value="/WEB-INF/views/distributor/distributorMenu.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/distributor/placeOrderDistributor.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/distributor/distributorLogout.jsp" />
+	<definition name="distributorPlaceOrder" extends="base.definition">
+		<put-attribute name="menu" value="/WEB-INF/views/distributors/distributorsMenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/distributors/distributorPlaceOrder.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/distributors/distributorsLogout.jsp" />
 	</definition>
 	
-	<definition name="orderRequestedDistributor" extends="base.definition">
-		<put-attribute name="menu" value="/WEB-INF/views/distributor/distributorMenu.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/distributor/orderRequestedDistributor.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/distributor/distributorLogout.jsp" />
+	<definition name="distributorRequestOrder" extends="base.definition">
+		<put-attribute name="menu" value="/WEB-INF/views/distributors/distributorsMenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/distributors/distributorRequestOrder.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/distributors/distributorsLogout.jsp" />
 	</definition>
 	
-	<definition name="requestReceived" extends="base.definition">
-		<put-attribute name="menu" value="/WEB-INF/views/manufacturer/manufacturerMenu.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/manufacturer/orderReceivedManufacturer.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/manufacturer/manufacturerLogout.jsp" />
+	<definition name="manufacturerReceivedRequest" extends="base.definition">
+		<put-attribute name="menu" value="/WEB-INF/views/manufacturers/manufacturerMenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/manufacturers/manufacturerReceivedRequest.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/manufacturers/manufacturersLogout.jsp" />
 	</definition>
 	
-	<definition name="errorPage" extends="base.definition">
-		<put-attribute name="menu" value="/WEB-INF/views/manufacturer/manufacturerMenu.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/manufacturer/requestProcessErrorManufacturer.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/manufacturer/manufacturerLogout.jsp" />
+	<definition name="manufacturerErrorPage" extends="base.definition">
+		<put-attribute name="menu" value="/WEB-INF/views/manufacturers/manufacturerMenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/manufacturers/manufacturerErrorPage.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/manufacturers/manufacturersLogout.jsp" />
 	</definition>
 	
-	<definition name="drugDirectoryDistributor" extends="base.definition">
-		<put-attribute name="menu" value="/WEB-INF/views/distributor/distributorMenu.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/distributor/drugDirectoryDistributor.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/distributor/distributorLogout.jsp" />
+	<definition name="distributorDrugDirectory" extends="base.definition">
+		<put-attribute name="menu" value="/WEB-INF/views/distributors/distributorsMenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/distributors/distributorDrugDirectory.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/distributors/distributorsLogout.jsp" />
 	</definition>
 	
-	<definition name="orderRequestDispenser" extends="base.definition">
-		<put-attribute name="menu" value="/WEB-INF/views/dispenser/dispenserMenu.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/dispenser/orderRequestedDispenser.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/dispenser/dispenserLogout.jsp" />
+	<definition name="dispenserRequestOrder" extends="base.definition">
+		<put-attribute name="menu" value="/WEB-INF/views/dispensers/dispensersMenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/dispensers/dispenserRequestOrder.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/dispensers/dispensersLogout.jsp" />
 	</definition>
 	
-	<definition name="orderRecieveDistributor" extends="base.definition">
-		<put-attribute name="menu" value="/WEB-INF/views/distributor/distributorMenu.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/distributor/orderReceiveDistributor.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/distributor/distributorLogout.jsp" />
+	<definition name="distributorReceiveOrder" extends="base.definition">
+		<put-attribute name="menu" value="/WEB-INF/views/distributors/distributorsMenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/distributors/distributorReceiveOrder.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/distributors/distributorsLogout.jsp" />
 	</definition>
 	
-	<definition name="errorPage2" extends="base.definition">
-		<put-attribute name="menu" value="/WEB-INF/views/distributor/distributorMenu.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/distributor/requestProcessErrorDistributor.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/distributor/distributorLogout.jsp" />
+	<definition name="distributorErrorPage" extends="base.definition">
+		<put-attribute name="menu" value="/WEB-INF/views/distributors/distributorsMenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/distributors/distributorErrorPage.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/distributors/distributorsLogout.jsp" />
 	</definition>
 	
-	<definition name="drugDirectoryDispenser" extends="base.definition">
-		<put-attribute name="menu" value="/WEB-INF/views/dispenser/dispenserMenu.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/dispenser/drugDirectoryDispenser.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/dispenser/dispenserLogout.jsp" />
+	<definition name="dispenserDrugDirectory" extends="base.definition">
+		<put-attribute name="menu" value="/WEB-INF/views/dispensers/dispensersMenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/dispensers/dispenserDrugDirectory.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/dispensers/dispensersLogout.jsp" />
 	</definition>
 
 </tiles-definitions>

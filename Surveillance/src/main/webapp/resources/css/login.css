@@ -1,0 +1,28 @@
+table.signIn	{
+	width:400px;
+  	height:180px;
+ 	margin:30px 50px;
+  	background-color:#e0e0e0;
+ 	border:silver;
+ 	border-radius :10px;
+ 	opacity:0.7;
+ 	padding:"20";
+ 	border-spacing:"2";
+}
+
+td 
+{
+	
+  	text-align: center;
+    font-weight:600;
+  
+}
+#button
+{
+	width:150px;
+	height:30px;
+	border-radius :2px;
+	font-weight:bolder;
+	font-size: 12px;
+	background-color: #808080;
+}

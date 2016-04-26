@@ -1,0 +1,32 @@
+div.request{
+	align:"left";
+	width: 570px; 
+	height: 250px; 
+	overflow: scroll; 
+	margin-left: 50px";
+}
+table.orderReceive {
+	width: 350px;
+	height: 250px;
+	background-color: #e0e0e0;
+	border: silver;
+	border-radius: 10px;
+	opacity: 0.7;
+	border: "2"; 
+	cellpadding: "5";
+	cellspacing: "2";
+	width: 550px;
+	align: "center";
+}
+
+td {
+	text-align: center;
+	font-weight: 600;
+}
+
+#button {
+	width: 70px;
+	height: 30px;
+	border-radius: 20px;
+	background-color: #808080";
+}

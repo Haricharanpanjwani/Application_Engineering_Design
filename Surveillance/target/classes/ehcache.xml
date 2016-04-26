@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<ehcache>  
+	<defaultCache   
+		maxElementsInMemory="100"   
+		eternal="false"   
+		timeToIdleSeconds="120"   
+		timeToLiveSeconds="200" />  
+		  
+		<cache name="com.javatpoint.Employee"   
+		maxElementsInMemory="100"   
+		eternal="false"   
+		timeToIdleSeconds="5"   
+		timeToLiveSeconds="200" />  
+</ehcache>  

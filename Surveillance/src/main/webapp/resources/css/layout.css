@@ -1,0 +1,12 @@
+table	{
+	border: 1px;  
+	padding: 2;
+	border-spacing: 1; 
+	align: center;
+}
+td #background {
+	height: 80px;
+	width: 700px;  
+	background-repeat: no-repeat;
+	background-size: 85px 90px;
+}

@@ -1,0 +1,25 @@
+table.menu
+{
+	width:190px;
+  	height:180px;
+ 	margin:5px 5px;
+  	background-color:#e0e0e0;
+ 	border:silver;
+ 	border-radius :10px;
+ 	opacity:0.7;
+ 	padding: 10px; 
+ 	border-spacing: 10px;
+}
+
+td 
+{
+	
+  	text-align: center;
+    font-weight:600;
+}
+a:hover 
+{
+  color: #606060 ;
+  font-size:13 px;
+  text-decoration: none ;
+}

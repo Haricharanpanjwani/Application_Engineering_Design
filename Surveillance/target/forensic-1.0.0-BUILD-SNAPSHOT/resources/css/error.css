@@ -1,0 +1,23 @@
+table.errorPage {
+	width: 400px;
+	height: 180px;
+	margin: 30px 50px;	
+	border-radius: 10px;
+	opacity: 0.7;
+	background-color: #e0e0e0;
+	border: silver;
+}
+
+td {
+	text-align: center;
+	font-weight: 600;
+}
+
+#button {
+	width: 150px;
+	height: 30px;
+	font-weight: bolder;
+	font-size: 15px;
+	background-color: #888888;
+	border-radius: 2px;
+}

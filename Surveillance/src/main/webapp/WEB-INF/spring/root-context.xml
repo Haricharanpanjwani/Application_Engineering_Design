@@ -4,9 +4,9 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
-	<bean id="userAccountDao" class="com.spring.forensic.dao.UserAccountDao"/>
-	<bean id="enterpriseDao" class="com.spring.forensic.dao.EnterpriseDao"/>
-	<bean id="drugDao" class="com.spring.forensic.dao.DrugDao"/>
-	<bean id="workRequestDao" class="com.spring.forensic.dao.WorkRequestDao"/>
+	<bean id="userAccountsDao" class="com.spring.forensic.dao.UserAccountsDao"/>
+	<bean id="enterprisesDao" class="com.spring.forensic.dao.EnterprisesDao"/>
+	<bean id="drugsDao" class="com.spring.forensic.dao.DrugsDao"/>
+	<bean id="workRequestsDao" class="com.spring.forensic.dao.WorkRequestsDao"/>
 	
 </beans>

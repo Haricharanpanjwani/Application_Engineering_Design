@@ -7,39 +7,37 @@ import org.hibernate.cfg.Configuration;
 public abstract class DAO {
 	
 	private static final SessionFactory sessionFactory= new Configuration().configure().buildSessionFactory();
-	private static final ThreadLocal sessionThread = new ThreadLocal();
+	private static final ThreadLocal threadSession = new ThreadLocal();
 	
-	public Session getSession()
-	{
-		Session session = (Session) sessionThread.get();
+	public Session getSession()	{
+		Session session = (Session) threadSession.get();
 		
-		if(session==null) {
+		if(session==null) {			
 			session= sessionFactory.openSession();
-			sessionThread.set(session);
-		}
-		
+			threadSession.set(session);			
+		}		
 		return session;
 	}
 	
-	public void begin() {
+	public void beginTrans() {
 		getSession().beginTransaction();
 	}
 	
-	public void commit() {
+	public void commitTrans() {
 		getSession().getTransaction().commit();
 	}
 	
-	public void close()	{
+	public void closeSession()	{
 		getSession().close();
-		sessionThread.set(null);
+		threadSession.set(null);
 	}
 
-	public void rollback()	{
+	public void rollbackTrans()	{
 		
 		try	{
 			getSession().getTransaction().rollback();
 			getSession().close();
-			sessionThread.set(null);
+			threadSession.set(null);
 		}
 		catch(Exception ex)	{
 			System.out.println("Exception inside rollback"+ ex);
