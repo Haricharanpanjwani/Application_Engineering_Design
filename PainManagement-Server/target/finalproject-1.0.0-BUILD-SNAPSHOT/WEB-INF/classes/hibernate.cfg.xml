@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+    	<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    	<!-- <property name="hibernate.connection.username">smartphone</property>
+        <property name="hibernate.connection.password">smartphone</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/world</property> -->
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/smartphone</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+        
+        <mapping resource="com/my/finalproject/model/ActionFeedback.hbm.xml"></mapping>
+        <mapping resource="com/my/finalproject/model/Answers.hbm.xml"></mapping>
+        <mapping resource="com/my/finalproject/model/CommentModel.hbm.xml"></mapping>
+        <mapping resource="com/my/finalproject/model/DoctorProfile.hbm.xml"></mapping>
+        <mapping resource="com/my/finalproject/model/MainCategory.hbm.xml"></mapping>
+        <mapping resource="com/my/finalproject/model/PainCategory.hbm.xml"></mapping>
+        <mapping resource="com/my/finalproject/model/PatientProfile.hbm.xml"></mapping>
+        <mapping resource="com/my/finalproject/model/ProgramDetails.hbm.xml"></mapping>
+        <mapping resource="com/my/finalproject/model/Questions.hbm.xml"></mapping>
+        <mapping resource="com/my/finalproject/model/SubCategory.hbm.xml"></mapping>
+        <mapping resource="com/my/finalproject/model/UserAccount.hbm.xml"></mapping>
+        <mapping resource="com/my/finalproject/model/UserPainDetails.hbm.xml"></mapping>
+        <mapping resource="com/my/finalproject/Feedbackcontrollers/QuestionModel.hbm.xml"/>
+        <mapping resource="com/my/finalproject/Medicinemodel/MedicineAndPatient.hbm.xml"/>
+        <mapping resource="com/my/finalproject/MedicineFeedback/MedicineFeedbackModel.hbm.xml"/>
+        <mapping resource="com/my/finalproject/model/AnswerInstruction.hbm.xml"/>
+
+    </session-factory>
+</hibernate-configuration>

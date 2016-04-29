@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 20, 2015 6:58:25 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.my.finalproject.model.PatientProfile" table="PATIENTPROFILE">
+        <id name="userid" type="int">
+            <column name="USERID" />
+            <generator class="assigned" />
+        </id>
+        <property name="firstname" type="java.lang.String">
+            <column name="FIRSTNAME" />
+        </property>
+        <property name="lastname" type="java.lang.String">
+            <column name="LASTNAME" />
+        </property>
+        <property name="gender" type="java.lang.String">
+            <column name="GENDER" />
+        </property>
+        <property name="date" type="java.lang.String">
+            <column name="DATE" />
+        </property>
+        <property name="healthCondition" type="java.lang.String">
+            <column name="HEALTHCONDITION" />
+        </property>
+        <property name="isPrescribed" type="java.lang.String">
+            <column name="ISPRESCRIBED" />
+        </property>
+        <property name="language" type="java.lang.String">
+            <column name="LANGUAGE" />
+        </property>
+        <property name="enthnonym" type="java.lang.String">
+            <column name="ENTHNONYM" />
+        </property>
+        <property name="enthnicity" type="java.lang.String">
+            <column name="ENTHNICITY" />
+        </property>
+        <property name="lastGradeSchool" type="java.lang.String">
+            <column name="LASTGRADESCHOOL" />
+        </property>
+        <property name="currentlyWorking" type="java.lang.String">
+            <column name="CURRENTLYWORKING" />
+        </property>
+        <property name="feet" type="int">
+            <column name="FEET" />
+        </property>
+        <property name="inches" type="int">
+            <column name="INCHES" />
+        </property>
+        <property name="weight" type="int">
+            <column name="WEIGHT" />
+        </property>
+        <property name="doctorid" type="int">
+            <column name="DOCTORID" />
+        </property>
+    </class>
+</hibernate-mapping>

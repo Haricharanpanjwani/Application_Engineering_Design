@@ -1,0 +1,32 @@
+//
+//  final-Prefix.pch
+//  final
+//
+//  Created by Shivam Goel on 4/27/16.
+//  Copyright © 2016 Hari Panjwani & Shivam Goel. All rights reserved.
+//
+
+#ifndef final_Prefix_pch
+#define final_Prefix_pch
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <Quickblox/Quickblox.h>
+#import <Quickblox/QBMulticastDelegate.h>
+#import <QMServices.h>
+#import <SVProgressHUD.h>
+#import "Constant.h"
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* final_Prefix_pch */
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+
+#define kShowSplashViewControllerSegue @"ShowSplashViewControllerSegue"
+#define kShowUsersViewControllerSegue @"ShowUsersViewControllerSegue"
+#define kShowChatViewControllerSegue @"ShowChatViewControllerSegue"
+#define kShowNewChatViewControllerSegue @"ShowNewChatViewControllerSegue"
+
+#define kMessage @"message"
+#define kRoomJID @"roomJID"

@@ -14,7 +14,7 @@
  <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
   <property name="host" value="smtp.gmail.com" />
   <property name="port" value="587" />
-  <property name="username" value="haricharan.panjwani@gmail.com" />
+  <property name="username" value="" />
   <property name="password" value="" />
   <property name="javaMailProperties">
    <props>
@@ -38,12 +38,6 @@
         </props>
     </property>
 </bean>
-
-<!-- <bean id="mailer" class="com.spring.forensic.velocity.Mailer">
-  <property name="mailSender" ref="mailSender" />
-  <property name="velocityEngine" ref="velocityEngine"/>
- </bean> -->
- 
   
  <bean id="viewResolver"  
   class="org.springframework.web.servlet.view.UrlBasedViewResolver">  

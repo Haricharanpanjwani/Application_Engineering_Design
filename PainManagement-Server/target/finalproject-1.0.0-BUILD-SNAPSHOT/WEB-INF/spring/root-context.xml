@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<bean name="userlogindao" class="com.my.finalproject.DAO.UserLoginDAO"></bean>
+	<bean name="programdao" class = "com.my.finalproject.DAO.ProgramDAO"></bean>
+	<bean name="doctordao" class="com.my.finalproject.DAO.DoctorDAO"></bean>
+	<bean name="paindao" class="com.my.finalproject.DAO.PainDAO"></bean>
+	<bean name="questiondao" class="com.my.finalproject.DAO.QuestionDAO"></bean>
+	<bean name="patientdetaildao" class="com.my.finalproject.DAO.PatientDetailDAO"></bean>
+	<bean name="medicinedao" class="com.my.finalproject.Medicinemodel.MedicineDAO"></bean>
+	<bean name="insertdao" class="com.my.finalproject.DAO.InsertDAO"></bean>
+	<bean name="editprofiledao" class="com.my.finalproject.DAO.EditProfileDAO"></bean>
+	<bean name="medicineremaininngdao" class="com.my.finalproject.MedicineFeedback.MedicineRemainingDAO"></bean>
+	<bean name="feedbackdao" class="com.my.finalproject.DAO.FeedBackDAO"></bean>
+</beans>

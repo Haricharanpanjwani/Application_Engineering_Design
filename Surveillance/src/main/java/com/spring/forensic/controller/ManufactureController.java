@@ -35,8 +35,12 @@ public class ManufactureController {
 	
 	@RequestMapping(value = "/addDrugs.htm")
 	public ModelAndView addDrugs(HttpServletRequest request) {
-
+		
 		HttpSession session = request.getSession();
+		
+		if(session.getAttribute("user") == null)
+			return new ModelAndView("login");
+			
 		UserAccounts userAccount = (UserAccounts) session.getAttribute("user");
 
 		session.setAttribute("user", userAccount);		
@@ -49,6 +53,9 @@ public class ManufactureController {
 	public ModelAndView drugAddProcess(HttpServletRequest request) {
 		
 		HttpSession session = request.getSession();
+		
+		if(session.getAttribute("user") == null)
+			return new ModelAndView("login");
 
 		Drugs newDrug = new Drugs();
 
@@ -87,9 +94,12 @@ public class ManufactureController {
 	@RequestMapping(value = "/manufacturerDrugDirectory.htm")
 	public ModelAndView manufacturerDrugDirectory(HttpServletRequest request) {
 
-		Enterprises enterprise = (Enterprises) request.getSession().getAttribute("enterp");
-
 		HttpSession session = request.getSession();
+		
+		if(session.getAttribute("user") == null)
+			return new ModelAndView("login");
+		
+		Enterprises enterprise = (Enterprises) request.getSession().getAttribute("enterp");		
 
 		List<Drugs> drugsList = drugsDao.getDrugs(enterprise);
 
@@ -108,6 +118,9 @@ public class ManufactureController {
 		
 		HttpSession session = request.getSession();
 		
+		if(session.getAttribute("user") == null)
+			return new ModelAndView("login");
+		
 		Enterprises enterprise = (Enterprises) session.getAttribute("enterp");		
 		List<WorkRequests> receiverList = workRequestsDao.getReceiverRequests(enterprise.getEnterpriseId());
 		
@@ -121,9 +134,14 @@ public class ManufactureController {
 		return new ModelAndView("manufacturerReceivedRequest", "senderList", receiverList);
 	}
 	
-	//manufacturer responding
+
 	@RequestMapping(value = "/manufacturerRequestProcess.htm")
 	public ModelAndView manufacturerRequestProcess(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		
+		HttpSession session = request.getSession();
+		
+		if(session.getAttribute("user") == null)
+			return new ModelAndView("login");
 		
 		Enterprises enterprise = (Enterprises) request.getSession().getAttribute("enterp");
 		request.getSession().setAttribute("user",request.getSession().getAttribute("user"));

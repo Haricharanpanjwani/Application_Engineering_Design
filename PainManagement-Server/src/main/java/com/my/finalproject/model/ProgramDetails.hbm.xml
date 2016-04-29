@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 1, 2015 4:29:56 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.my.finalproject.model.ProgramDetails" table="PROGRAMDETAILS">
+        <id name="programid" type="int">
+            <column name="PROGRAMID" />
+            <generator class="assigned" />
+        </id>
+        <property name="programname" type="java.lang.String">
+            <column name="PROGRAMNAME" />
+        </property>
+        <property name="programdetail" type="binary">
+            <column name="PROGRAMDETAIL" />
+        </property>
+        <property name="programurl" type="java.lang.String">
+            <column name="PROGRAMURL" />
+        </property>
+        <property name="subcategory" type="int">
+            <column name="SUBCATEGORY" />
+        </property>
+        <property name="programtype" type="java.lang.String">
+            <column name="PROGRAMTYPE" />
+        </property>
+    </class>
+</hibernate-mapping>

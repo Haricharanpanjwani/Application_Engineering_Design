@@ -1,0 +1,73 @@
+PODS:
+  - Bolts (1.7.0):
+    - Bolts/AppLinks (= 1.7.0)
+    - Bolts/Tasks (= 1.7.0)
+  - Bolts/AppLinks (1.7.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.7.0)
+  - QMChatViewController (0.3.7):
+    - QMChatViewController/Categories (= 0.3.7)
+    - QMChatViewController/KeyboardViewController (= 0.3.7)
+    - QMChatViewController/Protocols (= 0.3.7)
+    - QMChatViewController/Sections (= 0.3.7)
+    - QMChatViewController/Utils (= 0.3.7)
+    - QMChatViewController/Views (= 0.3.7)
+    - QuickBlox (>= 2.0)
+    - SDWebImage (~> 3.6)
+    - TTTAttributedLabel (~> 1.13)
+  - QMChatViewController/Categories (0.3.7):
+    - QuickBlox (>= 2.0)
+    - SDWebImage (~> 3.6)
+    - TTTAttributedLabel (~> 1.13)
+  - QMChatViewController/KeyboardViewController (0.3.7):
+    - QuickBlox (>= 2.0)
+    - SDWebImage (~> 3.6)
+    - TTTAttributedLabel (~> 1.13)
+  - QMChatViewController/Protocols (0.3.7):
+    - QuickBlox (>= 2.0)
+    - SDWebImage (~> 3.6)
+    - TTTAttributedLabel (~> 1.13)
+  - QMChatViewController/Sections (0.3.7):
+    - QuickBlox (>= 2.0)
+    - SDWebImage (~> 3.6)
+    - TTTAttributedLabel (~> 1.13)
+  - QMChatViewController/Utils (0.3.7):
+    - QuickBlox (>= 2.0)
+    - SDWebImage (~> 3.6)
+    - TTTAttributedLabel (~> 1.13)
+  - QMChatViewController/Views (0.3.7):
+    - QMChatViewController/Categories
+    - QMChatViewController/Protocols
+    - QuickBlox (>= 2.0)
+    - SDWebImage (~> 3.6)
+    - TTTAttributedLabel (~> 1.13)
+  - QMServices (0.4):
+    - Bolts (>= 1.5.0)
+    - QuickBlox (>= 2.6.5)
+  - QuickBlox (2.7.2)
+  - SDWebImage (3.7.5):
+    - SDWebImage/Core (= 3.7.5)
+  - SDWebImage/Core (3.7.5)
+  - SVProgressHUD (2.0.3)
+  - TTTAttributedLabel (1.13.4)
+  - TWMessageBarManager (1.8.1)
+
+DEPENDENCIES:
+  - Bolts
+  - QMChatViewController
+  - QMServices
+  - QuickBlox
+  - SVProgressHUD
+  - TWMessageBarManager
+
+SPEC CHECKSUMS:
+  Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
+  QMChatViewController: 12b47730905d9ae27ee21368a288a73b4315a2ae
+  QMServices: d394e72f3202206088fd18d2b6a507c597143e22
+  QuickBlox: 99d8b2db8df393e6b38e601a9d3ed2d0dd4b4db3
+  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
+  TWMessageBarManager: fd84e7948ba7968a2b5d9454859135761214ec56
+
+COCOAPODS: 0.39.0

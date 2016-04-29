@@ -1,0 +1,11 @@
+pod ‘QuickBlox’
+
+pod 'Bolts'
+
+pod 'QMServices'
+
+pod 'QMChatViewController'
+
+pod 'TWMessageBarManager'
+
+pod 'SVProgressHUD'

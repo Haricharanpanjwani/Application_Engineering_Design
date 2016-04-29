@@ -39,6 +39,9 @@ public class DistributersController {
 	public ModelAndView distributorPlaceOrder(HttpServletRequest request) {
 
 		HttpSession session = request.getSession();
+		
+		if(session.getAttribute("user") == null)
+			return new ModelAndView("login");
 				
 		List manufactureList = enterprisesDao.getEnterprises("Manufacturer", "");
 
@@ -54,6 +57,9 @@ public class DistributersController {
 	public ModelAndView distributorRequestOrder(HttpServletRequest request) {
 		
 		HttpSession session = request.getSession();
+		
+		if(session.getAttribute("user") == null)
+			return new ModelAndView("login");
 
 		String name = request.getParameter("drugName");
 		String quant = request.getParameter("quantity");
@@ -94,11 +100,14 @@ public class DistributersController {
 	
 	
 	@RequestMapping(value = "/distributorsRequest.htm")
-	public ModelAndView distributorsRequest(HttpServletRequest request) {
-		
-		Enterprises enterprise = (Enterprises) request.getSession().getAttribute("enterp");
+	public ModelAndView distributorsRequest(HttpServletRequest request) {		
 
 		HttpSession session = request.getSession();
+		
+		if(session.getAttribute("user") == null)
+			return new ModelAndView("login");
+		
+		Enterprises enterprise = (Enterprises) request.getSession().getAttribute("enterp");
 		
 		List<WorkRequests> senderList = workRequestsDao.getSenderRequests(enterprise.getEnterpriseId());
 		
@@ -114,10 +123,13 @@ public class DistributersController {
 	
 	@RequestMapping(value = "/distributorDrugDirectory.htm")
 	public ModelAndView distributorDrugDirectory(HttpServletRequest request) {
-		
-		Enterprises enterprise = (Enterprises) request.getSession().getAttribute("enterp");
 
 		HttpSession session = request.getSession();
+		
+		if(session.getAttribute("user") == null)
+			return new ModelAndView("login");
+		
+		Enterprises enterprise = (Enterprises) request.getSession().getAttribute("enterp");
 
 		List drugsList = drugsDao.getDrugs(enterprise);
 
@@ -134,11 +146,14 @@ public class DistributersController {
 	@RequestMapping(value = "/distributorReceiveOrder.htm")
 	public ModelAndView distributorReceiveOrder(HttpServletRequest request) {
 				
-		System.out.println("Distributor Receive Order");
-		
-		Enterprises enterprise = (Enterprises) request.getSession().getAttribute("enterp");
+		System.out.println("Distributor Receive Order");		
 
 		HttpSession session = request.getSession();
+		
+		if(session.getAttribute("user") == null)
+			return new ModelAndView("login");
+		
+		Enterprises enterprise = (Enterprises) request.getSession().getAttribute("enterp");
 
 		List receiverList = workRequestsDao.getReceiverRequests(enterprise.getEnterpriseId());
 
@@ -150,6 +165,11 @@ public class DistributersController {
 	
 	@RequestMapping(value = "/distributorProcess.htm")
 	public ModelAndView distributorProcess(HttpServletRequest request) {
+		
+		HttpSession session = request.getSession();
+		
+		if(session.getAttribute("user") == null)
+			return new ModelAndView("login");
 		
 		Enterprises enterprise = (Enterprises) request.getSession().getAttribute("enterp");
 		

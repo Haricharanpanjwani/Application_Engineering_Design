@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 1, 2015 4:29:56 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.my.finalproject.model.PainCategory" table="PAINCATEGORY">
+        <id name="painid" type="int">
+            <column name="PAINID" />
+            <generator class="assigned" />
+        </id>
+        <property name="painname" type="java.lang.String">
+            <column name="PAINNAME" />
+        </property>
+        <property name="des" type="java.lang.String">
+            <column name="DES" />
+        </property>
+    </class>
+</hibernate-mapping>

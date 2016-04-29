@@ -39,6 +39,9 @@ public class DispensersController {
 
 		HttpSession session = request.getSession();
 		
+		if(session.getAttribute("user") == null)
+			return new ModelAndView("login");
+		
 		List dispenserList = enterprisesDao.getEnterprises("Distributor", "");
 
 		UserAccounts userAccount = (UserAccounts) session.getAttribute("user");
@@ -53,6 +56,9 @@ public class DispensersController {
 	public ModelAndView dispenserOrderRequest(HttpServletRequest request) {
 		
 		HttpSession session = request.getSession();
+		
+		if(session.getAttribute("user") == null)
+			return new ModelAndView("login");
 
 		String drug = request.getParameter("drugName");
 		String quant = request.getParameter("quantity");
@@ -93,11 +99,14 @@ public class DispensersController {
 
 
 	@RequestMapping(value = "/dispenserRequestedDrug.htm")
-	public ModelAndView dispenserRequestedDrug(HttpServletRequest request) {
-		
-		Enterprises enterprise = (Enterprises) request.getSession().getAttribute("enterp");
+	public ModelAndView dispenserRequestedDrug(HttpServletRequest request) {		
 
 		HttpSession session = request.getSession();
+		
+		if(session.getAttribute("user") == null)
+			return new ModelAndView("login");
+		
+		Enterprises enterprise = (Enterprises) request.getSession().getAttribute("enterp");
 
 		List senderList = workRequestsDao.getSenderRequests(enterprise.getEnterpriseId());
 
@@ -108,11 +117,14 @@ public class DispensersController {
 	}
 	
 	@RequestMapping(value = "/dispenserDrugDirectory.htm")
-	public ModelAndView dispenserDrugDirectory(HttpServletRequest request) {
-		
-		Enterprises enterprise = (Enterprises) request.getSession().getAttribute("enterp");
+	public ModelAndView dispenserDrugDirectory(HttpServletRequest request) {		
 
 		HttpSession requestSession = request.getSession();
+		
+		if(requestSession.getAttribute("user") == null)
+			return new ModelAndView("login");
+		
+		Enterprises enterprise = (Enterprises) request.getSession().getAttribute("enterp");
 
 		List drugsList = drugsDao.getDrugs(enterprise);
 

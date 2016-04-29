@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 1, 2015 4:29:56 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.my.finalproject.model.DoctorProfile" table="DOCTORPROFILE">
+        <id name="doctorid" type="int">
+            <column name="DOCTORID" />
+            <generator class="assigned" />
+        </id>
+        <property name="emailid" type="java.lang.String">
+            <column name="EMAILID" />
+        </property>
+        <property name="firstname" type="java.lang.String">
+            <column name="FIRSTNAME" />
+        </property>
+        <property name="lastname" type="java.lang.String">
+            <column name="LASTNAME" />
+        </property>
+        <property name="phonenum" type="java.lang.String">
+            <column name="PHONENUM" />
+        </property>
+        <property name="specialist" type="java.lang.String">
+            <column name="SPECIALIST" />
+        </property>
+    </class>
+</hibernate-mapping>

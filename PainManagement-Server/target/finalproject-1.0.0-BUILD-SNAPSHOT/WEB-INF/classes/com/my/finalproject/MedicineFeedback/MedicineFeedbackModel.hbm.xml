@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 1, 2015 3:38:01 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.my.finalproject.MedicineFeedback.MedicineFeedbackModel" table="MEDICINEFEEDBACKMODEL">
+        <id name="timeStamp" type="java.lang.String">
+            <column name="TIMESTAMP" />
+            <generator class="assigned" />
+        </id>
+        <property name="mpid" type="int">
+            <column name="MPID" />
+        </property>
+        <property name="date" type="java.lang.String">
+            <column name="DATE" />
+        </property>
+        <property name="mHistory" type="java.lang.String" access="field">
+            <column name="MHISTORY" />
+        </property>
+        <property name="totalAmount" type="int">
+            <column name="TOTALAMOUNT" />
+        </property>
+    </class>
+</hibernate-mapping>

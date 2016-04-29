@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 1, 2015 2:18:43 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.my.finalproject.Medicinemodel.MedicineAndPatient" table="MEDICINEANDPATIENT">
+        <id name="mpid" type="int">
+            <column name="MPID" />
+            <generator class="assigned" />
+        </id>
+        <property name="userid" type="int">
+            <column name="USERID" />
+        </property>
+        <property name="medicineid" type="int">
+            <column name="MEDICINEID" />
+        </property>
+        <property name="medicinedes" type="java.lang.String">
+            <column name="MEDICINEDES" />
+        </property>
+        <property name="medicinename" type="java.lang.String">
+            <column name="MEDICINENAME" />
+        </property>
+        <property name="maxquatity" type="int">
+            <column name="MAXQUATITY" />
+        </property>
+        <property name="mdpertime" type="float">
+            <column name="MDPERTIME" />
+        </property>
+    </class>
+</hibernate-mapping>

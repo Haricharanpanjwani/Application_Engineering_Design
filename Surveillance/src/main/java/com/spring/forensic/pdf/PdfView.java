@@ -47,7 +47,7 @@ public class PdfView extends AbstractPdfView{
 				tab.addCell(drug.getExpiryDate());
 	        }
 			
-			
+			// formatting of table
 			tab.enableBorderSide(10);
 			tab.setBorder(5);
 			tab.setAutoFillEmptyCells(true);
@@ -63,6 +63,8 @@ public class PdfView extends AbstractPdfView{
 			pdfDocument.add(new Paragraph("Welcome : "+ userAccount.getFirstName()+" "+ userAccount.getLastName())) ;
 			pdfDocument.add(new Paragraph("Enterprise DRUG Inventory",FontFactory.getFont(FontFactory.HELVETICA,24,Font.BOLD,Color.GRAY)));
 			pdfDocument.add(tab);
+			
+			//For adding metadata to PDF document
 			pdfDocument.addAuthor("Hari Panjwani");
 			pdfDocument.addHeader("PDF", "View");
 			pdfDocument.addSubject("Subject");

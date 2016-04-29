@@ -101,6 +101,9 @@ public class LoginController {
 
 	@RequestMapping(value = "/signIn.htm")
 	public String userSignedIn(HttpServletRequest req) {
+		
+		if(req.getParameter("userName") == null)
+			return "login";
 
 		String name = req.getParameter("userName");
 
@@ -192,6 +195,10 @@ public class LoginController {
 	public ModelAndView addUserAccount(HttpServletRequest request) {
 
 		HttpSession session = request.getSession();
+		
+		if(session.getAttribute("user") == null)
+			return new ModelAndView("login");
+		
 		UserAccounts userAccount = (UserAccounts) session.getAttribute("user");
 
 		session.setAttribute("user", userAccount);
@@ -205,6 +212,9 @@ public class LoginController {
 	public ModelAndView enterpriseDirectoryList(HttpServletRequest request) {
 		
 		HttpSession session = request.getSession();
+		
+		if(session.getAttribute("user") == null)
+			return new ModelAndView("login");
 		
 		Enterprises enterprise = (Enterprises) session.getAttribute("enterp");
 
@@ -262,6 +272,9 @@ public class LoginController {
 		
 		HttpSession session = request.getSession();
 		
+		if(session.getAttribute("user") == null)
+			return new ModelAndView("login");
+		
 		UserAccounts userAccount = (UserAccounts) session.getAttribute("user");
 		session.setAttribute("user", userAccount);
 		session.setAttribute("enterp", userAccount.getEnterprise());	
@@ -296,6 +309,9 @@ public class LoginController {
 		
 		HttpSession session = request.getSession();		
 		
+		if(session.getAttribute("user") == null)
+			return new ModelAndView("login");
+		
 		UserAccounts userAccount = (UserAccounts) session.getAttribute("user");
 		session.setAttribute("user", session.getAttribute("user"));
 		session.setAttribute("enterp", userAccount.getEnterprise());
@@ -312,6 +328,9 @@ public class LoginController {
 	public ModelAndView drugReport(HttpServletRequest request) {
 		
 		HttpSession requestSession = request.getSession(false);		
+		
+		if(requestSession.getAttribute("user") == null)
+			return new ModelAndView("login");
 		
 		requestSession.setAttribute("user", requestSession.getAttribute("user"));		
 			
@@ -373,7 +392,12 @@ public class LoginController {
 	// PDF Report Generation
 	@RequestMapping(value="/generatePDFReport.htm")
 	public ModelAndView generatePDFReport(HttpServletRequest request)	{
-			
+		
+		HttpSession session = request.getSession();
+		
+		if(session.getAttribute("user") == null)
+			return new ModelAndView("login");
+		
 		Enterprises enterprise = (Enterprises)request.getSession().getAttribute("enterp");
 		List<Drugs> drugsList = drugsDao.getDrugs(enterprise);
 			
