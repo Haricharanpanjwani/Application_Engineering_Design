@@ -17,6 +17,7 @@
 
 @property (nonatomic, weak) id<EditProfileViewControllerDelegate> delegate;
 
+@property (strong, nonatomic) UITapGestureRecognizer *tap;
 @property (strong,nonatomic) UserAccount *ua;
 @property (strong,nonatomic) PatientProfile *profile;
 
@@ -28,10 +29,12 @@
 @property (strong, nonatomic) IBOutlet UITextField *enthnicity;
 @property (strong, nonatomic) IBOutlet UITextField *currentlyworking;
 @property (strong, nonatomic) IBOutlet UITextField *weight;
-@property (strong, nonatomic) IBOutlet UITextField *startdate;
+//@property (strong, nonatomic) IBOutlet UITextField *startdate;
 @property (strong, nonatomic) IBOutlet UITextField *height;
+@property (weak, nonatomic) IBOutlet UIDatePicker *startDate;
 
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
+
 
 - (IBAction)Save:(id)sender;
 

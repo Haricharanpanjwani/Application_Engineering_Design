@@ -20,7 +20,8 @@
     UserAccount *ua;
     NSInteger responseData;
 }
-//@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (weak, nonatomic) IBOutlet UILabel *jsonData;
 @property(nonatomic,strong)PatientMedicine *data;
 @property(nonatomic,strong)UserAccount *ua;

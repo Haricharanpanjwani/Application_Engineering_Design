@@ -2,8 +2,6 @@
 //  LoginTableViewController.m
 //  sample-chat
 //
-//  Created by Anton Sokolchenko on 5/26/15.
-//  Copyright (c) 2015 Igor Khomenko. All rights reserved.
 //
 
 #import "LoginTableViewController.h"
@@ -37,6 +35,7 @@ static NSString *const kTestUsersDefaultPassword = @"123456789";
         Adding code to send the user Account from
         LoginTableViewController to ServicesManager
      */
+    self.tableView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg18.jpg"]];
     
     
     SWRevealViewController *revealViewController = self.revealViewController;

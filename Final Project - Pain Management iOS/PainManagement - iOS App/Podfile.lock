@@ -1,4 +1,5 @@
 PODS:
+  - ASValueTrackingSlider (0.11.2)
   - Bolts (1.7.0):
     - Bolts/AppLinks (= 1.7.0)
     - Bolts/Tasks (= 1.7.0)
@@ -53,6 +54,7 @@ PODS:
   - TWMessageBarManager (1.8.1)
 
 DEPENDENCIES:
+  - ASValueTrackingSlider
   - Bolts
   - QMChatViewController
   - QMServices
@@ -61,6 +63,7 @@ DEPENDENCIES:
   - TWMessageBarManager
 
 SPEC CHECKSUMS:
+  ASValueTrackingSlider: 45c9f78252da60de01d8f2afe869aaf90dd978d9
   Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
   QMChatViewController: 12b47730905d9ae27ee21368a288a73b4315a2ae
   QMServices: d394e72f3202206088fd18d2b6a507c597143e22

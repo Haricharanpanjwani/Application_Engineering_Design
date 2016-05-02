@@ -2,8 +2,6 @@
 //  NewDialogTableViewController.m
 //  sample-chat
 //
-//  Created by Anton Sokolchenko on 5/29/15.
-//  Copyright (c) 2015 Igor Khomenko. All rights reserved.
 //
 
 #import "NewDialogTableViewController.h"
@@ -27,7 +25,8 @@
     self.tableView.dataSource = self.dataSource;
 
 	[super viewDidLoad];
-    
+    self.tableView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg18.jpg"]];
+
     self.tableView.tableFooterView = [UIView new];
 }
 

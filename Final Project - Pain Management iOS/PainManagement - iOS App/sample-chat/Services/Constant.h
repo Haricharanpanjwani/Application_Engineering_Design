@@ -2,8 +2,6 @@
 //  Constants.h
 //  sample-chat
 //
-//  Created by Anton Sokolchenko on 5/29/15.
-//  Copyright (c) 2015 Igor Khomenko. All rights reserved.
 //
 
 #ifndef sample_chat_Constants_h

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '70ED8EFD0B7E6D5CB9C4C29E'
+               BlueprintIdentifier = 'C95F7DFB62E78B2BDBE2D935'
                BlueprintName = 'QMServices-QMChatCacheModel'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'QMChatCacheModel.bundle'>

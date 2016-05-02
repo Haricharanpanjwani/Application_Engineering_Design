@@ -2,8 +2,6 @@
 //  ChatViewController.m
 //  sample-chat
 //
-//  Created by Andrey Moskvin on 6/9/15.
-//  Copyright (c) 2015 Igor Khomenko. All rights reserved.
 //
 
 #import "ChatViewController.h"
@@ -81,6 +79,9 @@ QMChatCellDelegate
     self.attachmentCells = [NSMapTable strongToWeakObjectsMapTable];
     self.stringBuilder = [MessageStatusStringBuilder new];
     self.detailedCells = [NSMutableSet set];
+    
+    //Disabling Info Button
+    self.navigationItem.rightBarButtonItem.enabled = NO;
     
     [self updateTitle];
     

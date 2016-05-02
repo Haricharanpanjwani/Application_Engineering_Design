@@ -9,3 +9,5 @@ pod 'QMChatViewController'
 pod 'TWMessageBarManager'
 
 pod 'SVProgressHUD'
+
+pod ‘ASValueTrackingSlider’

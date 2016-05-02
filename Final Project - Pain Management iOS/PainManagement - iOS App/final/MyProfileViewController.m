@@ -182,7 +182,7 @@
         
         dataArray =[NSMutableArray arrayWithObjects:p,p1,p2,p3,p4,p5,p6,p7,p9 ,nil];
         
-        if(profile.firstName != nil) {            
+        if(profile.firstName != (id) [NSNull null]) {
             self.editButton.enabled = NO;
         }
         

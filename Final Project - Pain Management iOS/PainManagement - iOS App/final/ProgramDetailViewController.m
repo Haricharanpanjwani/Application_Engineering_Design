@@ -33,16 +33,18 @@
     // Do any additional setup after loading the view.
     
     mydelegate =(AppDelegate *) [[UIApplication sharedApplication]delegate];
-    self.title =data.programName;
-    //self.pickerView.hidden = YES;
+    self.title = @"Program Description";
     self.clickToWatch.hidden = YES;
-    //self.done.hidden = YES;
     self.playVideoButton.hidden = YES;
     self.programName.text = data.programName;
     self.programName.numberOfLines=0;
+    //self.pickerView.hidden = YES;
+    //self.done.hidden = YES;
+    
     if (data.programDetails == NULL) {
         self.programDescription.text = data.programDetails;
-    }else{
+    }
+    else{
         self.programDescription.text = @"";
        
         
@@ -68,23 +70,29 @@
     
     NSString *youTubeString = @"/Users/hpanjwani/Desktop/Pain_Management_APP-master 2 2/step.mov";
     
-    if ([data.programUrl rangeOfString:@"youtube" options:NSCaseInsensitiveSearch].location == NSNotFound) {
-        
-        NSLog(@"Normal MP3");
-        NSURL *url = [NSURL URLWithString:data.programUrl];
-        [self playVideo:youTubeString];
-    } else {
-        
-        NSLog(@"Youtube vidoe");
-        //Added youtube video link here
-        NSString *youTubeURL = @"https://www.youtube.com/watch?v=NxoBfbhoEmo";
-        //[self embedYouTube:youTubeURL];
+    if(data.programUrl != (id)[NSNull null]) {
+        if ([data.programUrl rangeOfString:@"youtube" options:NSCaseInsensitiveSearch].location == NSNotFound)
+        {        
+            NSLog(@"Normal MP3");
+            NSURL *url = [NSURL URLWithString:data.programUrl];
+            [self playVideo:url];
+        }
+        else {
+            NSLog(@"Youtube video");
+            //Added youtube video link here
+            NSString *youTubeURL = @"https://www.youtube.com/watch?v=NxoBfbhoEmo";
+            [self embedYouTube:youTubeURL];
+        }
+    }
+    else {
+        self.pickerView.hidden = YES;
+        self.done.hidden = YES;
     }
 }
 
 - (void)embedYouTube:(NSString*)url {
     
-    CGRect frame = CGRectMake(30.0, 115.0, 300.0, 260.0);
+    CGRect frame = CGRectMake(50.0, 115.0, 350.0, 200.0);
     
     NSString* embedHTML = @"\
     <html><head>\
@@ -140,15 +148,39 @@
     selectedRow = row;
 }
 
+- (void) playMedia {
+    
+    NSString *video = @"file://localhost/Users/hpanjwani/Downloads/recording/FS_Spring-Unit-Test.mp4";
+    NSURL *url = [NSURL URLWithString:video];
+    moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:url];
+    
+    //MPMoviePlayerViewController
+    
+//    moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:video ofType:@"mp4"]]];
+//    
+//    
+//    //moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:url];
+//    
+//
+//    //[moviePlayer play];
+    //[self.view addSubview:self->moviePlayer.view];
+    self.pickerView.hidden = NO;
+    self.done.hidden = NO;
+}
+
 - (IBAction)playVideo:(id)sender {
     
-    NSString *video = @"/Users/hpanjwani/Desktop/Pain_Management_APP-master 2 2/step.mov";
+//    NSString *video = @"/Users/hpanjwani/Downloads/recording/";
+//    
+//    NSURL *url = [NSURL URLWithString:video];
+//    //NSURL *url = [NSURL URLWithString:data.programUrl];
+//    
+//    moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:url];
     
+    NSString *video = @"file://localhost/Users/hpanjwani/Downloads/recording/FS_Spring-Unit-Test.mp4";
     NSURL *url = [NSURL URLWithString:video];
-    //NSURL *url = [NSURL URLWithString:data.programUrl];
     
     moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:url];
-
     [self presentMoviePlayerViewControllerAnimated:moviePlayer];
     [moviePlayer.moviePlayer play];
     self.pickerView.hidden = NO;

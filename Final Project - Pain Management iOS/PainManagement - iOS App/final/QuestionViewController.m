@@ -160,7 +160,7 @@
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"Reports"];
-    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"report.txt"];
+    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"report.doc"];
     
     NSError *error;
     
@@ -188,6 +188,9 @@
     }
     
     NSLog(@"File Path: %@", filePath);
+    
+    //Composing email
+    [self showEmail:@"report.doc"];
  
 //    Commenting to check
     
@@ -431,6 +434,12 @@
     ins4 = NO;
     ins5 = NO;
     
+    //UISlider UI change
+    self.mySlider.popUpViewCornerRadius = 12.0;
+    [self.mySlider setMaxFractionDigitsDisplayed:0];
+    self.mySlider.popUpViewColor = [UIColor colorWithHue:0.55 saturation:0.8 brightness:0.9 alpha:0.7];
+    self.mySlider.font = [UIFont fontWithName:@"GillSans-Bold" size:22];
+    self.mySlider.tintColor = [UIColor colorWithHue:0.55 saturation:1.0 brightness:0.5 alpha:1];
     
     self.mySlider.minimumValue = 0;
     self.mySlider.maximumValue = 10;
@@ -613,7 +622,80 @@
     
 }
 
+- (void)showEmail:(NSString*)file {
+    
+    NSString *emailTitle = @"Patient Survey Report";
+    NSString *messageBody = @"Dear Doctor, Here is the patient report of the answers he has marked!";
+    NSArray *toRecipents = [NSArray arrayWithObject:@"haricharan.panjwani@gmail.com"];
+    
+    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+    mc.mailComposeDelegate = self;
+    [mc setSubject:emailTitle];
+    [mc setMessageBody:messageBody isHTML:NO];
+    [mc setToRecipients:toRecipents];
+    
+    // Determine the file name and extension
+    NSArray *filepart = [file componentsSeparatedByString:@"."];
+    NSString *filename = [filepart objectAtIndex:0];
+    NSString *extension = [filepart objectAtIndex:1];
+    
+    // Get the resource path and read the file using NSData
+    NSFileManager *mgr = [NSFileManager defaultManager];
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"Reports"];
+    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"report.doc"];
+    //NSString *filePath = [[NSBundle mainBundle] pathForResource:filename ofType:extension];
+    NSData *fileData = [NSData dataWithContentsOfFile:filePath];
+    
+    // Determine the MIME type
+    NSString *mimeType;
+    mimeType = @"application/json";
+    if ([extension isEqualToString:@"jpg"]) {
+        mimeType = @"image/jpeg";
+    } else if ([extension isEqualToString:@"png"]) {
+        mimeType = @"image/png";
+    } else if ([extension isEqualToString:@"doc"]) {
+        mimeType = @"application/msword";
+    } else if ([extension isEqualToString:@"ppt"]) {
+        mimeType = @"application/vnd.ms-powerpoint";
+    } else if ([extension isEqualToString:@"html"]) {
+        mimeType = @"text/html";
+    } else if ([extension isEqualToString:@"pdf"]) {
+        mimeType = @"application/pdf";
+    }
+    
+    // Add attachment
+    [mc addAttachmentData:fileData mimeType:mimeType fileName:filename];
+    
+    // Present mail view controller on screen
+    [self presentViewController:mc animated:YES completion:NULL];
+    
+}
 
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Mail cancelled");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Mail saved");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Mail sent");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            break;
+        default:
+            break;
+    }
+    
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
 
 
 @end

@@ -12,5 +12,5 @@
 
 //NSString *const Url = @"http://localhost:8080/finalproject/";//@"http://localhost:8080/finalproject/"; //@"http://localhost:8080/finalproject/";//@"http://www.idelta.info:8080/SmartPhoneProject/";//
 //NSString *const Url = @"http://10.102.49.68:8080/finalproject/";
-NSString *const Url = @"http://172.20.10.4:8080/finalproject/";
+NSString *const Url = @"http://10.0.0.55:8080/finalproject/";
 @end

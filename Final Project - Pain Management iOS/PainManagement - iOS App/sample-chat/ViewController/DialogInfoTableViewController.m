@@ -2,8 +2,6 @@
 //  DialogInfoTableViewController.m
 //  sample-chat
 //
-//  Created by Andrey Moskvin on 6/9/15.
-//  Copyright (c) 2015 Igor Khomenko. All rights reserved.
 //
 
 #import "DialogInfoTableViewController.h"
@@ -22,6 +20,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.tableView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg18.jpg"]];
+
     self.tableView.tableFooterView = [UIView new];
     self.title = NSLocalizedString(@"SA_STR_CHAT_INFO", nil);
 	[self refreshDataSource];

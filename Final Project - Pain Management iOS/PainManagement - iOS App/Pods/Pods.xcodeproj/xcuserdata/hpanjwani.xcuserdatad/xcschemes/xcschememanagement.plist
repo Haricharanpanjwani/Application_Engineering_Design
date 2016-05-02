@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ASValueTrackingSlider.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Bolts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,32 +67,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>144C6274586FAC23BBBA4FD1A1C381A9</key>
+		<key>00380F3FC7B6202D2EF9E4563768B442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3A8F5A725D52FF42C328E2D8317DB1D2</key>
+		<key>071B0DB4D0563B282EC6DC45D2578DD9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>40D69167E93E096528C6FC51D7C3F854</key>
+		<key>0765526DD77B2332BA8D8CD4DAB75E9E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>41E3EF7A924A07EF728BC597277E9AAF</key>
+		<key>67C126C7A2514EEDEF117409066BBD9D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4D69052842A4857843FA9EF98C30D3BC</key>
+		<key>9FCEE104CCC82303E1A7C18ECC8FE45D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9D22A5C0BB10BCA5B1D37DFDD13C055B</key>
+		<key>A80A1B463E7F3811CCE61C6E014CCD59</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B0D11334C5005D7FF23C3BC0FE86B92A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,22 +107,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C61442E9FA2BCBE9067BF27DB06E9DCA</key>
+		<key>CFF4120A977829E8892E63A2AD960276</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C923FE7DC68CC4C10895C7B109428EA8</key>
+		<key>D3F51EF4973F68CEC33F92BD7BEE595E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C9271B34511BFC5332C6FE9DA9AA61B7</key>
+		<key>DDC486871ACE613F075FDBB33C103C3A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F827F83B64578CDF2729ABB7FD2C84F3</key>
+		<key>DF91CBBC0D5B666A763814F136D30C16</key>
 		<dict>
 			<key>primary</key>
 			<true/>

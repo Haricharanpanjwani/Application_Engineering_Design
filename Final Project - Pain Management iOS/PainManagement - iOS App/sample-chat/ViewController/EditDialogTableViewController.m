@@ -2,8 +2,6 @@
 //  EditDialogTableViewController.m
 //  sample-chat
 //
-//  Created by Anton Sokolchenko on 6/8/15.
-//  Copyright (c) 2015 Igor Khomenko. All rights reserved.
 //
 
 #import "EditDialogTableViewController.h"
@@ -22,7 +20,8 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-    
+    self.tableView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg18.jpg"]];
+
     self.tableView.tableFooterView = [UIView new];
 	NSParameterAssert(self.dialog);
 }

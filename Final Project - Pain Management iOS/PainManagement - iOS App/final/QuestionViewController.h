@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "UserAccount.h"
+#import "ASValueTrackingSlider.h"
+#import <MessageUI/MessageUI.h>
 
-@interface QuestionViewController : UIViewController
+@interface QuestionViewController : UIViewController <MFMailComposeViewControllerDelegate>
 {
     UserAccount *ua;
     NSArray *jsonarray;
@@ -73,14 +75,16 @@
 @property int correctAnswerNumber;
 
 @property (weak, nonatomic) IBOutlet UILabel *myLabel;
-@property (weak, nonatomic) IBOutlet UISlider *mySlider;
-- (IBAction)sliderValueChanged:(UISlider *)sender;
+@property (weak, nonatomic) IBOutlet ASValueTrackingSlider *mySlider;
+- (IBAction)sliderValueChanged:(ASValueTrackingSlider *)sender;
 @property (weak, nonatomic) IBOutlet UILabel *zerolab;
 @property (weak, nonatomic) IBOutlet UILabel *tenlabel;
 @property (weak, nonatomic) IBOutlet UIImageView *smiley;
 @property (weak, nonatomic) IBOutlet UIImageView *sad;
 @property (weak, nonatomic) IBOutlet UILabel *smileydesc;
 @property (weak, nonatomic) IBOutlet UILabel *saddesc;
+
+- (void)showEmail:(NSString*)file;
 
 
 @end

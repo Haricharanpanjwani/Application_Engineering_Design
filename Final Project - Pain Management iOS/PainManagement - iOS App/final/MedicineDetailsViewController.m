@@ -34,7 +34,7 @@
     self.medicineName.text = @"Description:";
     NSString *medval = [NSString stringWithFormat:@"%@ per time",[data.mdpertime stringValue]];
     self.quantity.text = medval;
-    self.quantity.numberOfLines = 0;
+    //self.quantity.numberOfLines = 0;
     self.medicineDes.text = data.medicineDes;
     self.title = data.medicineName;
    

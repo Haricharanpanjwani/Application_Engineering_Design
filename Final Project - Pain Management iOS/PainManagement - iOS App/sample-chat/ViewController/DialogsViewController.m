@@ -30,7 +30,8 @@ QMChatConnectionDelegate
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
+    self.tableView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg18.jpg"]];
+
     // calling awakeFromNib due to viewDidLoad not being called by instantiateViewControllerWithIdentifier
     [ServicesManager.instance.chatService addDelegate:self];
     self.observerDidBecomeActive = [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidBecomeActiveNotification

@@ -16,7 +16,7 @@
     NSMutableData *data;
     UserAccount *ua;
 }
-//@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property(nonatomic,strong)NSMutableArray *jsonData;
 @property(nonatomic,strong)NSMutableData *data;
 @property(nonatomic,strong)UserAccount *ua;

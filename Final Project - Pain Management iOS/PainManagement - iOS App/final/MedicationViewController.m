@@ -21,13 +21,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     jsonData = [[NSMutableArray alloc]init];
-//    SWRevealViewController *revealViewController = self.revealViewController;
-//    if(revealViewController){
-//        [self.sidebarButton setTarget:self.revealViewController];
-//        [self.sidebarButton setAction:@selector(revealToggle:)];
-//        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-//        self.ua = revealViewController.ua;
-//    }
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if(revealViewController){
+        [self.sidebarButton setTarget:self.revealViewController];
+        [self.sidebarButton setAction:@selector(revealToggle:)];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+        self.ua = revealViewController.ua;
+    }
     NSDictionary *newData = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithLong:self.ua.userId],@"userid",self.ua.username,@"username",self.ua.password,nil];
     NSData *  dataVal = [NSJSONSerialization dataWithJSONObject:newData options:kNilOptions error:nil];
     NSString *stringUrl = [NSString stringWithFormat:@"%@medicine",Url];
@@ -47,6 +47,7 @@
     NSHTTPURLResponse *response = nil;
     
     NSData *result = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:nil];
+    
     if ([response statusCode] >= 200 && [response statusCode] < 300)
     {
     id object = [NSJSONSerialization JSONObjectWithData:result options:kNilOptions error:nil];
